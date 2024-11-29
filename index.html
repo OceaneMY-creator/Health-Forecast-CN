@@ -1,0 +1,1441 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>健康预报</title>
+  <link rel="stylesheet" type="text/css" href="style/custom.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" rel="stylesheet"/>
+</head>
+
+<body class="mx-auto">
+
+<!--Header-->
+
+<header class="xs:hidden s:hidden md:hidden lg:hidden 2xl:block">
+  <div class="container justify-center items-center mx-auto">
+    <nav class="relative py-10 flex justify-between items-center bg-white">
+      <a class="" href="#">
+        <img src="./assets/images/logo-large.png" class="w-64 px-6" alt="logo">
+      </a>
+      <div class="lg:hidden lg:ml-auto absolute right-0 bottom-0 items-center">
+        <button class="navbar-burger flex p-5">
+          <svg class="block xs:h-8 xs:w-8 s:h-8 s:w-8 fill-current" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+            <title>Mobile menu</title>
+            <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"></path>
+          </svg>
+        </button>
+      </div>
+      <ul class="hidden absolute top-1/2 left-1/2 transform -translate-y-1/2 -translate-x-1/2 lg:flex lg:mx-auto lg:items-center lg:w-auto space-x-8">
+        <li><a class="2xl:text-3xl hover:text-lime-400" href="#">首页</a></li>
+        <li><a class="2xl:text-3xl hover:text-lime-400" href="/intro.html">健康预报</a></li>
+        <li><a class="2xl:text-3xl hover:text-lime-400" href="#">服务范围</a></li>
+        <li><a class="2xl:text-3xl hover:text-lime-400" href="/affiliate.html">创业机会</a></li>
+        <li><a class="2xl:text-3xl hover:text-lime-400" href="#">会员区</a></li>
+      </ul>
+      <div>
+        <button class="hidden py-auto lg:inline-block lg:ml-auto lg:mr-3 py-5 px-16 bg-gray-50 hover:bg-gray-100 text-4xl text-gray-900 font-bold transition duration-200 bg-[#9BE642] rounded-xl text-black hover:bg-lime-400">登录</button>
+      </div>
+    </nav>
+    <div class="navbar-menu relative z-50 hidden">
+      <div class="navbar-backdrop fixed inset-0 bg-gray-800 opacity-25"></div>
+      <nav class="fixed top-0 left-0 bottom-0 flex flex-col w-5/6 max-w-sm py-6 px-6 bg-white border-r overflow-y-auto">
+        <div class="flex items-center mb-8">
+            <a class="" href="#">
+              <img src="./assets/images/logo.svg" class="lg:w-2/3 md:2/3" alt="logo">
+            </a>
+          <button class="navbar-close">
+
+          </button>
+        </div>
+        <div id="mobile-menu">
+          <ul>
+            <li class="mb-1">
+              <a class="text-sm py-4 hover:text-lime-400" href="#">首页</a>
+            <li class="mb-1">
+              <li><a class="text-sm py-4 hover:text-lime-400" href="/intro.html">健康预报</a></li>
+            </li>
+            <li class="mb-1">
+              <li><a class="text-sm py-4 hover:text-lime-400" href="#">服务范围</a></li>
+            </li>
+            <li class="mb-1">
+              <li><a class="text-sm py-4 hover:text-lime-400" href="/affiliate.html">创业机会</a></li>
+            </li>
+            <li class="mb-1">
+              <li><a class="text-sm py-4 hover:text-lime-400" href="#">会员区</a></li>
+            </li>
+          </ul>
+        </div>
+        <div class="mt-10">
+          <div class="pt-6">
+            <a class="hidden lg:inline-block lg:ml-auto lg:mr-3 py-2 px-6 bg-gray-50 hover:bg-gray-100 text-sm text-gray-900 font-bold  rounded-xl transition duration-200 bg-[#9BE642] rounded-sm px-4 py-2 text-black hover:bg-lime-400">登录</a>
+            <a class="block px-4 py-3 mb-3 leading-loose text-xs text-center font-semibold leading-none bg-white hover:bg-lime-400 rounded-sm" href="#">登录</a>
+            <a class="block px-4 py-3 mb-2 leading-loose text-xs text-center text-white font-semibold bg-[#9BE642] hover:bg-lime-400  rounded-sm" href="#">注册</a>
+          </div>
+          <p class="my-4 text-xs text-center text-gray-400">
+            <span>©2024.健康预报</span>
+          </p>
+        </div>
+      </nav>
+    </div>
+  </div>
+</header>
+
+<header class="2xl:hidden">
+  <div class="container justify-center items-center mx-auto">
+    <nav class="relative px-6 py-3 flex justify-between items-center bg-white lg:w-2/3 lg:mx-auto">
+      <a class="" href="#">
+        <img src="./assets/images/logo.svg" class="s:w-36 xs:w-21" alt="logo">
+      </a>
+      <div class="lg:hidden lg:ml-auto absolute right-0 items-center">
+        <button class="navbar-burger flex p-5">
+          <svg class="block h-4 w-4 fill-current" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+            <title>Mobile menu</title>
+            <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"></path>
+          </svg>
+        </button>
+      </div>
+      <ul class="hidden absolute top-1/2 left-1/2 transform -translate-y-1/2 -translate-x-1/2 lg:flex lg:mx-auto lg:flex lg:items-center lg:w-auto lg:space-x-6">
+        <li><a class="text-base hover:text-lime-400" href="#">首页</a></li>
+        <li><a class="text-base hover:text-lime-400" href="/intro.html">健康预报</a></li>
+        <li><a class="text-base hover:text-lime-400" href="#">服务范围</a></li>
+        <li><a class="text-base hover:text-lime-400" href="/affiliate.html">创业机会</a></li>
+        <li><a class="text-base hover:text-lime-400" href="#">会员区</a></li>
+      </ul>
+      <div>
+        <button class="hidden lg:inline-block lg:ml-auto lg:mr-3 py-2 px-6 bg-[#9BE642] hover:bg-gray-100 text-sm text-gray-900 font-bold transition duration-200 rounded-sm px-4 py-2 text-black hover:bg-lime-400">登录</button>
+      </div>
+    </nav>
+    <div class="navbar-menu relative z-50 hidden">
+      <div class="navbar-backdrop fixed inset-0 bg-gray-800 opacity-25"></div>
+      <nav class="fixed top-0 left-0 bottom-0 flex flex-col w-5/6 max-w-sm py-6 px-6 bg-white border-r overflow-y-auto">
+        <div class="flex items-center mb-8">
+            <a class="" href="#">
+              <img src="./assets/images/logo-large.png" class="xs:w-28 s:2/3" alt="logo">
+            </a>
+          <button class="navbar-close">
+
+          </button>
+        </div>
+        <div id="mobile-menu">
+          <ul>
+            <li class="mb-1">
+              <a class="text-base py-4 hover:text-lime-400" href="#">首页</a>
+            <li class="mb-1">
+              <li><a class="text-base py-4 hover:text-lime-400" href="#">健康预报</a></li>
+            </li>
+            <li class="mb-1">
+              <li><a class="text-base py-4 hover:text-lime-400" href="#">服务范围</a></li>
+            </li>
+            <li class="mb-1">
+              <li><a class="text-base py-4 hover:text-lime-400" href="affiliate.html">创业机会</a></li>
+            </li>
+            <li class="mb-1">
+              <li><a class="text-base py-4 hover:text-lime-400" href="#">会员区</a></li>
+            </li>
+          </ul>
+        </div>
+        <div class="mt-10">
+          <div class="pt-6">
+            <a class="hidden lg:inline-block lg:ml-auto lg:mr-3 py-2 px-6 bg-[#9BE642] hover:bg-gray-100 text-sm text-gray-900 font-bold  rounded-xl transition duration-200 rounded-sm px-4 py-2 text-black hover:bg-lime-400">登录</a>
+            <a class="block px-4 py-3 mb-3 leading-loose text-base text-center font-semibold leading-none bg-white hover:bg-[#9BE642] rounded-md" href="#">登录</a>
+            <a class="block px-4 py-3 mb-2 leading-loose text-base text-center text-white font-semibold bg-lime-600 hover:bg-lime-400  rounded-md" href="#">注册</a>
+          </div>
+          <p class="my-4 text-xs text-center text-gray-400">
+            <span>©2024.健康预报</span>
+          </p>
+        </div>
+      </nav>
+    </div>
+  </div>
+</header>
+
+
+<!--Hero Banner-->
+
+<section id="hero-banner-mobile" class="xs:block s:block md:hidden lg:hidden xl:hidden 2xl:hidden">
+  <div class="mx-auto text-center">
+    <div class="font-bold pt-16 pb-5 s:text-4xl xs:text-4xl">
+      <h2>
+        健康预报支持您 </h2>
+       <h2 class="pt-2">理解自己的身体，</h2>
+      <h2 class="pt-2">利于健康的不败之地！</h2>
+    </div>
+    <div class="px-10 text-xl s:block md:block">
+      <p>
+        本站为您提供基本体质测试，<br> 本季运健康报告，未来健康预报！
+      </p>
+    </div>
+    <div id="header-btn" class="sm:text-xl xs:text-xl pt-10 mx-auto">
+      <button class="flex mx-auto bg-[#FF9901] text-white rounded-xl px-8 py-4 mx-auto hover:bg-lime-400">
+        <a href="" class="">立即订阅  &#x203A;</a>
+      </button>
+    </div>
+      <div id="header-btn" class="sm:text-xl xs:text-xl pt-2 pb-10 mx-auto">
+      <button class="flex mx-auto bg-white text-[#FF9901] rounded-xl px-8 py-4 mx-auto hover:bg-lime-400">
+        <a href="" class="">了解更多 &#x203A;</a>
+      </button>
+    </div>
+
+  </div>
+</section>
+
+<section id="hero-banner" class="xs:hidden s:hidden md:block lg:block xl:block xl-max:hidden 2xl:hidden">
+  <div class="mx-auto mb-10 container text-center justify-center items-center">
+    <div class="font-bold md:text-3xl s:text-3xl xs:text-base">
+      <h2 class="mx-auto py-10">
+        健康预报支持您 <br>
+        理解自己的身体，
+        利于健康的不败之地！
+      </h2>
+    </div>
+    <div class="lg:text-md md:text-md s:hidden md:block">
+      <p>
+        本站为您提供基本体质测试，本季运健康报告，未来健康预报！
+      </p>
+    </div>
+    <div class="lg:text-md md:text-md sm:text-sm xs:block md:hidden">
+      <p>
+        本站为您提供基本体质测试，本季运健康报告，<br> 未来健康预报！
+      </p>
+    </div>
+    <div id="header-btn" class="lg:text-md md:text-md sm:text-sm py-10">
+      <button class="bg-[#FF9901] text-white rounded-sm px-8 py-2 mr-2 hover:bg-lime-400">
+        <a href="" class="">立即订阅  &#x203A;</a>
+      </button>
+      <button class="bg-white text-[#FF9901] rounded-sm px-8 py-2 ml-2 hover:bg-lime-400">
+        <a href="" class="">了解更多 &#x203A;</a>
+      </button>
+    </div>
+
+  </div>
+</section>
+
+<section id="hero-banner" class="xl xs:hidden s:hidden md:hidden lg:hidden xl:hidden xl-max:block 2xl:block">
+  <div class="mx-auto py-20 mb-10 container text-center justify-center items-center">
+    <div class="font-bold text-8xl">
+      <h2 class="mx-auto pt-20 py-8">
+        <p>健康预报支持您理解自己的身体，</p>
+        <p class="pt-10">利于健康的不败之地！</p>
+      </h2>
+    </div>
+    <div class="">
+      <p class="text-5xl py-16">
+        本站为您提供基本体质测试， 本季运健康报告，未来健康预报！
+      </p>
+    </div>
+    <div id="header-btn" class="text-4xl pt-6 pb-10">
+      <button class="bg-[#FF9901] text-white rounded-xl px-8 py-6 mr-8 hover:bg-lime-400">
+        <a href="" class="px-16">立即订阅  &#x203A;</a>
+      </button>
+      <button class="bg-white text-[#FF9901] rounded-xl px-8 py-6 ml-8 hover:bg-lime-400">
+        <a href="" class="px-16">了解更多 &#x203A;</a>
+      </button>
+    </div>
+
+  </div>
+</section>
+
+
+<!--Form-->
+
+<section id="form-mobile" class="xs:block s:block md:hidden lg:hidden xl:hidden mb-10">
+  <div class="xs:w-96 s:w-4/5 px-5 bg-white border border-gray-900/10 shadow-lg rounded-md pb-5 my-5 mx-auto">
+    <div class="mx-auto text-center py-5">
+      <p class="s:text-base xs:text-sm">你的生日，决定了你一生的健康！</p>
+      <h3 class="s:text-3xl xs:text-3xl py-2"><span class="text-lime-600">一分钟</span>免费测试基本体质</h3>
+      <p class="text-lime-600 s:text-base xs:text-sm">参与测试的用户都说体质报告精准！</p>
+    </div>
+    <div class="form">
+      <div class="col-span-3 px-1 py-3">
+        <label for="name" class="block text-sm font-medium leading-6 text-gray-900"><span class="text-red-500">* </span>姓名：</label>
+        <div class="mt-2">
+          <select id="name" name="name" class="block w-full bg-blue-50 rounded-md border-0 py-1.5 text-gray-400 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:max-w-sm sm:text-sm sm:leading-6">
+            <option>&nbsp;真实名字或昵称皆可</option>
+          </select>
+        </div>
+      </div>
+      <div class="col-span-3 px-1 py-3">
+        <label for="gender" class="block text-sm font-medium leading-6 text-gray-900"><span class="text-red-500">* </span>性别：</label>
+        <div class="">
+          <select id="gender" name="gender" class="block w-full bg-blue-50 rounded-md border-0 py-1.5 text-gray-400 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:max-w-sm sm:text-sm sm:leading-6">
+            <option>&nbsp; 性别</option>
+          </select>
+        </div>
+      </div>
+      <div class="col-span-3 px-1 py-3">
+        <label for="birth" class="block lg:w-full text-sm font-medium leading-6 text-gray-900"><span class="text-red-500">* </span>出生日期：</label>
+        <div class="flex justify-between">
+          <select id="year" name="birth" class="block w-1/3 lg:w-1/3 mr-1.5 bg-blue-50 rounded-md border-0 text-gray-400 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:max-w-1/3 sm:text-sm sm:leading-6">
+            <option>&nbsp; 年</option>
+          </select>
+          <select id="month" name="birth" class="block w-1/3 lg:w-1/3 mr-1.5 bg-blue-50 rounded-md border-0  text-gray-400 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:max-w-1/3 sm:text-sm sm:leading-6">
+            <option>&nbsp; 月</option>
+          </select>
+          <select id="day" name="birth" class="flex w-1/3 lg:w-1/3 bg-blue-50 rounded-md border-0 text-gray-400 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:max-w-1/3 sm:text-sm sm:leading-6">
+            <option>&nbsp; 日</option>
+          </select>
+        </div>
+      </div>
+      
+      <div class="col-span-3 px-1 py-3">
+        <label for="time" class="block text-sm font-medium leading-6 text-gray-900 pl-2"><span class="text-red-500"></span>出生时间</label>
+        <div class="">
+          <select id="time" name="time" class="block w-full bg-blue-50 rounded-md border-0 py-1.5 text-gray-400 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:max-w-sm sm:text-sm sm:leading-6">
+            <option>&nbsp; 如不清楚出生时间，请略过此项</option>
+          </select>
+        </div>
+      </div>
+      <!--阴历阳历input-->
+      <div class="col-span-3 px-1 py-3">
+        <div class="flex">
+          <div class="flex items-center me-4">
+            <label class="relative flex items-center cursor-pointer" for="green-600">
+              <input
+                name="color"
+                type="radio"
+                class="peer h-5 w-5 cursor-pointer appearance-none rounded-full border border-slate-300 checked:border-lime-600 focus:green-600 transition-all"
+                id="green-600"
+              />
+              <span class="absolute bg-lime-600 w-3 h-3 rounded-full opacity-0 peer-checked:opacity-100 transition-opacity duration-200 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"></span>
+            </label>            
+            <label for="inline-radio" class="ms-2 text-sm font-medium text-gray-900 dark:text-gray-300">阴历</label>
+          </div>
+          <div class="flex items-center me-4">
+          <label class="relative flex items-center cursor-pointer" for="green-600">
+            <input
+              name="color"
+              type="radio"
+              class="peer h-5 w-5 cursor-pointer appearance-none rounded-full border border-slate-300 checked:border-lime-600 transition-all"
+              id="green-600"
+            />
+            <span class="absolute bg-lime-600 w-3 h-3 rounded-full opacity-0 peer-checked:opacity-100 transition-opacity duration-200 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"></span>
+          </label>            
+          <label for="inline-radio" class="ms-2 text-sm font-medium text-gray-900 dark:text-gray-300">阳历</label>
+          </div>
+        </div>
+      </div>
+      <div class="col-span-3 px-1 py-3">
+        <label for="gender" class="block text-sm font-medium leading-6 text-gray-900"><span class="text-red-500">* </span>出生地点：</label>
+        <div class="">
+          <select id="gender" name="gender" class="block w-full bg-blue-50 rounded-md border-0 py-1.5 text-gray-400 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:max-w-sm sm:text-sm sm:leading-6">
+            <option>&nbsp;国家/地区</option>
+          </select>
+        </div>
+      </div>
+      <div class="col-span-3 px-1 py-3">
+        <label for="gender" class="block text-sm font-medium leading-6 text-gray-900"><span class="text-red-500">* </span>生活地点：</label>
+        <div class="">
+          <select id="gender" name="gender" class="block w-full bg-blue-50 rounded-md border-0 py-1.5 text-gray-400 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:max-w-sm sm:text-sm sm:leading-6">
+            <option>&nbsp; 国家/地区</option>
+          </select>
+        </div>
+      </div>
+      <div class="col-span-3 px-1 py-3">
+        <button class="text-xl bg-lime-600 w-full lg:w-full rounded-md py-2 text-white hover:bg-lime-400">立即测试</button>
+      </div>
+  </div>
+</section>
+
+<section id="form" class="xs:hidden s:hidden md:block lg:block xl:block mb-10">
+  <div class="container mx-auto 2xl:w-2/3 w-2/3 bg-white border border-gray-900/10 shadow-lg rounded-md pb-5 my-5 mx-auto">
+    <div class="mx-auto text-center pt-5">
+      <p class="2xl:text-4xl">你的生日，决定了你一生的健康！</p>
+      <h3 class="2xl:text-6xl text-3xl py-3 2xl:py-6"><span class="text-lime-600">一分钟</span>免费测试基本体质</h3>
+      <p class="2xl:text-4xl text-lime-600">参与测试的用户都说体质报告精准！</p>
+    </div>
+    <div class="form">
+      <div class="col-span-3 px-5 py-6">
+        <label for="name" class="block text-base 2xl:text-2xl font-medium leading-6 text-gray-900"><span class="text-red-500">* </span>姓名：</label>
+        <div class="mt-3 2xl:mt-6">
+          <select id="name" name="name" class="block text-base w-full 2xl:text-2xl bg-blue-50 rounded-md border-0 py-3 text-gray-400 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
+            <option>&nbsp;真实名字或昵称皆可</option>
+          </select>
+        </div>
+      </div>
+      <div class="sm:col-span-3 lg:col-span-full px-5 py-6">
+        <label for="gender" class="block text-base  2xl:text-2xl font-medium leading-6 text-gray-900"><span class="text-red-500">* </span>性别：</label>
+        <div class="mt-3 2xl:mt-6">
+          <select id="gender" name="gender" class="block w-full 2xl:text-xl bg-blue-50 rounded-md border-0 py-1.5 2xl:py-3 text-gray-400 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
+            <option>&nbsp; 性别</option>
+          </select>
+        </div>
+      </div>
+      <div class="sm:col-span-3 lg:col-span-full px-5 py-6">
+        <label for="birth" class="block  2xl:text-2xl font-medium leading-6 text-gray-900"><span class="text-red-500">* </span>出生日期：</label>
+        <div class="flex justify-between mt-3 2xl:mt-6">
+          <select id="year" name="birth" class="block  2xl:text-2xl w-1/3 lg:w-1/3 mr-6 bg-blue-50 rounded-md border-0 py-1.5 text-gray-400 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:max-w-1/3 sm:text-sm sm:leading-6">
+            <option>&nbsp; 年</option>
+          </select>
+          <select id="month" name="birth" class="block 2xl:text-2xl w-1/3 lg:w-1/3 mr-6 bg-blue-50 rounded-md border-0 py-1.5 text-gray-400 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:max-w-1/3 sm:text-sm sm:leading-6">
+            <option>&nbsp; 月</option>
+          </select>
+          <select id="day" name="birth" class="block 2xl:text-2xl w-1/3 lg:w-1/3 bg-blue-50 rounded-md border-0 py-1.5 text-gray-400 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:max-w-1/3 sm:text-sm sm:leading-6">
+            <option>&nbsp; 日</option>
+          </select>
+        </div>
+      </div>
+      
+      <div class="sm:col-span-3 lg:col-span-full px-5 py-6">
+        <label for="time" class="block 2xl:text-2xl text-base font-medium leading-6 text-gray-900 pl-2"><span class="text-red-500"></span>出生时间</label>
+        <div class="mt-3 2xl:mt-6">
+          <select id="time" name="time" class="block 2xl:text-2xl w-full bg-blue-50 rounded-md border-0 py-1.5 text-gray-400 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
+            <option>&nbsp; 如不清楚出生时间，请略过此项</option>
+          </select>
+        </div>
+      </div>
+      <!--阴历阳历input-->
+      <div class="sm:col-span-3 lg:col-span-full px-5 py-6">
+        <div class="flex">
+          <div class="flex items-center me-4">
+            <label class="relative flex items-center cursor-pointer" for="green-600">
+              <input
+                name="color"
+                type="radio"
+                class="peer h-6 w-6 2xl:h-10 2xl:w-10 cursor-pointer appearance-none rounded-full border border-slate-300 checked:border-lime-600 focus:green-600 transition-all"
+                id="green-600"
+              />
+              <span class="absolute bg-lime-600 w-3 h-3 rounded-full opacity-0 peer-checked:opacity-100 transition-opacity duration-200 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"></span>
+            </label>            
+            <label for="inline-radio" class="ms-2 2xl:text-2xl font-medium text-gray-900 dark:text-gray-300">阴历</label>
+          </div>
+          <div class="flex items-center me-4">
+          <label class="relative flex items-center cursor-pointer" for="green-600">
+            <input
+              name="color"
+              type="radio"
+              class="peer h-6 w-6 2xl:h-10 2xl:w-10 cursor-pointer appearance-none rounded-full border border-slate-300 checked:border-lime-600 transition-all"
+              id="green-600"
+            />
+            <span class="absolute bg-lime-600 w-3 h-3 rounded-full opacity-0 peer-checked:opacity-100 transition-opacity duration-200 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"></span>
+          </label>            
+          <label for="inline-radio" class="ms-2 2xl:text-2xl font-medium text-gray-900 dark:text-gray-300">阳历</label>
+          </div>
+        </div>
+      </div>
+      <div class="sm:col-span-3 lg:col-span-full px-5 py-6">
+        <label for="gender" class="block 2xl:text-2xl font-medium leading-6 text-gray-900"><span class="text-red-500">* </span>出生地点：</label>
+        <div class="mt-3 2xl:mt-6">
+          <select id="gender" name="gender" class="block w-full 2xl:text-2xl bg-blue-50 rounded-md border-0 py-3 text-gray-400 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
+            <option>&nbsp;国家/地区</option>
+          </select>
+        </div>
+      </div>
+      <div class="sm:col-span-3 lg:col-span-full px-5 py-6">
+        <label for="gender" class="block 2xl:text-2xl font-medium leading-6 text-gray-900"><span class="text-red-500">* </span>生活地点：</label>
+        <div class="mt-3 2xl:mt-6">
+          <select id="gender" name="gender" class="block 2xl:text-2xl w-full bg-blue-50 rounded-md border-0 py-3 text-gray-400 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
+            <option class>&nbsp; 国家/地区</option>
+          </select>
+        </div>
+      </div>
+
+      <!--Button-->
+      <div class="sm:col-span-3 lg:col-span-full px-5 py-6 justify-center text-center">    
+      <!-- The Modal Button-->
+
+      <!-- Trigger/Open The Modal -->
+      <button id="myBtn" class="open-button bg-lime-600 2xl:text-4xl w-full lg:w-full rounded-xl py-6 text-white hover:bg-lime-400">立即测试</button>
+      </div>
+  </div>
+</section>
+
+
+
+<!-- The Modal -->
+<div id="myModal" class="modal">
+
+  <!-- Modal content -->
+  <div class="mt-[20%] modal-content container my-auto grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 lg:text-sm">
+    <div class=" col-span-1 py-auto z-0 flex justify-self-start items-end">
+      <img class="popup-image" src="./assets/images/popup-01.jpeg" alt="">
+    </div>
+    <div class="col-span-2 pl-10">
+      <span class="close pl-5 pt-0 pr-0">&times;</span>
+      <p>每一位用户仅限一次免费获取基本体质报告，您输入的每一项数据都将影响报告的最终结果，请再次确认您的基本数据是准确的：</p>
+      <br>
+      <p class="w-20">姓名：</p>
+      <p>出生日期：</p>
+      <p>出生时间</p>
+      <p>历法：</p>
+      <p>性别：</p>
+      <p>出生地点：</p>
+      <p>今日生活地点：</p>
+
+      <br>
+      <div class="text-left">
+ 
+        <!--Modal Button 2-->
+        <div class="sm:col-span-3 lg:col-span-full px-5 py-6">    
+          <!-- Trigger/Open The Modal -->
+          <button id="myBtn2" class="open-button confirm px-10 rounded-full bg-transparent border border-orange-400 hover:bg-orange-400 hover:text-white" id="confirm">确认</button>
+
+          <!-- The Modal Button-->
+          <button class="edit rounded-full bg-orange-400 px-10 text-white hover:text-black" id="edit">修改</button>
+        </div>
+        
+        <p class="warning text-red-500 text-sm pt-3">*确认后不可再修改</p>
+      </div>
+  </div>
+
+</div>
+
+<!-- The Modal 2-->
+<div id="myModal2" class="modal2">
+
+  <!-- Modal content -->
+  <div class="mt-[20%] xl:w-[90%] modal-content container my-auto grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 lg:text-base">
+    <div class="col-span-1 py-auto z-0 flex justify-self-start items-end">
+      <img class="popup-image" src="./assets/images/popup-02.jpeg" alt="">
+    </div>
+    <div class="col-span-2 pl-10">
+      <span class="close2 pl-5 pt-0 pr-0">&times;</span>
+      <p>您已领取过免费基本体质报告，再次免费查看，请进入：</p>
+      <button class="confirm my-5 px-10 text-orange-400 rounded-lg bg-transparent border border-orange-400 hover:bg-orange-400 hover:text-white" id="confirm">我的免费健康报告</button>
+
+        <p>享受更加全面完整的服务，请进入：</p>
+        <button class="confirm my-5 px-10 text-white rounded-lg bg-orange-400 hover:border-orange-400 hover:bg-transparent hover:text-black" id="confirm">健康预报</button>
+        
+        <p class="warning text-red-500 text-base pt-3">如果已经提交过，会提示已经领取弹窗</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!--Case-->
+
+<section id="case-mobile" class="xs:block s:block md:hidden lg:hidden xl:hidden mb-5">
+  <div class="flex text-center justify-center items-center">
+    <h2 class="sm:text-3xl xs:text-3xl lg:text-3xl md:text-3xl pb-5">出生时间<span class="text-[#FF9901]">仅差一天</span> ，<br> 相同的出生地点 <br>
+      2024年健康度<span class="text-[#FF9901]">大相径庭</span></h2>
+  </div>
+  <div class="grid grid-cols-2 xs:block">
+      <p class="text-center font-bold md:text-sm s:text-xl xs:text-xl">1987年3月22日出生</p>
+        <div class="col-span-2">
+          <img class="mx-auto py-5 xs:2/3 s:w-1/3" src="./assets/images/case/profile-1.png" alt="">
+        </div>
+        <div class="col-span-2 flex justify-center">
+          <img class="py-2 s:px-3 xs:2/3 s:w-1/3" src="./assets/images/case/month1-1.png" alt="">
+          <img class="py-2 s:px-3 xs:2/3 s:w-1/3" src="./assets/images/case/month1-2.png" alt="">
+        </div>
+        <div class="col-span-2 flex justify-center">
+          <img class="py-2 s:px-3 xs:2/3 s:w-1/3" src="./assets/images/case/month1-3.png" alt="">
+          <img class="py-2 s:px-3 xs:2/3 s:w-1/3" src="./assets/images/case/month1-4.png" alt="">
+        </div>
+     </div>
+      <p class="pt-5 text-center font-bold md:text-sm s:text-xl xs:text-xl">1987年3月23日出生</p>
+
+      <div class="col-span-2">
+        <img class="mx-auto py-5  xs:2/3 s:w-1/3" src="./assets/images/case/profile-2.png" alt="">
+      </div>
+      <div class="col-span-2 flex justify-center">
+        <img class="py-2 s:px-3 xs:2/3 s:w-1/3" src="./assets/images/case/month2-1.png" alt="">
+        <img class="py-2 s:px-3 xs:2/3 s:w-1/3" src="./assets/images/case/month2-2.png" alt="">
+      </div>
+      <div class="col-span-2 flex justify-center">
+        <img class="py-2 s:px-3 xs:2/3 s:w-1/3" src="./assets/images/case/month2-3.png" alt="">
+        <img class="py-2 s:px-3 xs:2/3 s:w-1/3" src="./assets/images/case/month2-4.png" alt="">
+      </div>
+      <div class="">
+        <img class="s:px-24 xs:px-36 xs:w-full s:w-full" src="./assets/images/case/month-list.png" alt="">
+      </div>
+  </div>
+
+  <div class="summary-text">
+    <p class="text-center xs:px-24 s:px-16 xs:text-base s:text-xl text-gray-500 pt-5">
+      通过这两个案例，你可以清晰地看到， 尽管出生日期仅差1天，他们的健康状况却有显著不同。
+      这正是经过出生时间了解自己基本体质的关键所在!
+    </p>
+  </div>
+</section>
+
+<section id="case" class="xs:hidden s:hidden md:block lg:block xl:block 2xl:block mb-5">
+  <div class="container py-10 px-10 mx-auto text-center justify-center title">
+    <p class="lg:text-3xl md:text-3xl 2xl:text-5xl pb-5">
+      出生时间<span class="text-[#FF9901]">仅差一天</span> ，相同的出生地点
+    </p>
+    <p class="lg:text-3xl md:text-3xl 2xl:text-5xl">
+      2024年健康度<span class=" lg:text-3xl md:text-3xl 2xl:text-5xl text-[#FF9901]">大相径庭</span>
+    </p>
+  </div>
+  <div class="container 2xl:mx-auto mx-auto 2xl:w-full lg:w-4/5 s:hidden md:block">
+    <div class="grid 2xl:grid-cols-7 grid-cols-6 2xl:grid-rows-1 grid-rows-1 gap-0 items-end">
+      <img class="2xl:w-full lg:w-5/6 lg:gap-y-1 sm:w-full m-0 mx-auto" src="./assets/images/case/profile-1.png" alt="">
+      <div class="">
+        <p class="2xl:text-xl text-center font-bold md:text-sm s:text-xs xs:text-xs">1987年3月22日出生</p>
+        <img class="2xl:w-full lg:w-full lg:px-2   col-span-1 mx-auto" src="./assets/images/case/month1-1.png" alt="">
+      </div>
+      <img class="2xl:w-full lg:w-full lg:px-2  mx-auto" src="./assets/images/case/month1-2.png" alt="">
+      <img class="2xl:w-full lg:w-full lg:px-2   mx-auto" src="./assets/images/case/month1-3.png" alt="">
+      <img class="2xl:w-full lg:w-full lg:px-2   mx-auto" src="./assets/images/case/month1-4.png" alt="">
+      <img class="2xl:w-2/3 2xl:col-span-2 2xl:row-end-2 2xl:col-end-8 row-span-2 col-span-1 lg:pb-10 lg:w-full md:pb-6" src="./assets/images/case/month-list.png" alt="">
+      <img class="2xl:w-full lg:w-full lg:px-2  lg:w-5/6 lg:gap-y-1 sm:w-full m-0 mx-auto" src="./assets/images/case/profile-2.png" alt="">
+      <div>
+        <p class="2xl:text-xl text-center font-bold md:text-sm s:text-xs xs:text-xs">1987年3月22日出生</p>
+        <img class="2xl:w-full lg:w-full lg:px-2   col-span-1 mx-auto" src="./assets/images/case/month2-1.png" alt="">
+      </div>
+      <img class="2xl:w-full lg:w-full lg:px-2    mx-auto" src="./assets/images/case/month2-2.png" alt=""> 
+      <img class="2xl:w-full  lg:w-full lg:px-2   mx-auto" src="./assets/images/case/month2-3.png" alt="">
+      <img class="2xl:w-full  lg:w-full lg:px-2   mx-auto" src="./assets/images/case/month2-4.png" alt="">
+    </div>
+  </div>
+
+  <div class="container mx-auto my-20 lg:my-10 summary-text">
+    <p class="2xl:hidden lg:hidden md:hidden s:block xs:block text-base text-center text-gray-500 pt-5">
+      通过这两个案例，你可以清晰地看到， <br> 尽管出生日期仅差1天，他们的健康状况却有显著不同。<br> 
+      这正是经过出生时间了解自己基本体质的关键所在!
+    </p>
+    <p class="2xl:hidden lg:block md:hidden s:hidden xs:hidden text-base text-center text-gray-500 pt-0">
+      通过这两个案例，你可以清晰地看到， 尽管出生日期仅差1天，他们的健康状况却有显著不同
+      这正是经过出生时间了解自己基本体质的关键所在!
+    </p>
+    <p class="2xl:block 2xl:text-2xl lg:hidden md:hidden s:hidden xs:hidden text-center text-gray-500 pt-15">
+      通过这两个案例，你可以清晰地看到， 尽管出生日期仅差1天，他们的健康状况却有显著不同。
+      这正是经过出生时间了解自己基本体质的关键所在!
+    </p>
+  </div>
+</section>
+
+<!--Problem-->
+
+<section id="problem-mobile" class="xs:block s:block md:hidden lg:hidden xl:hidden">
+  <div class="grid px-10 mx-auto text-center justify-center title">
+    <h2 class="xs:text-3xl s:text-3xl mt-5">在您以往的生活中, </h2>
+    <h2 class="xs:text-3xl s:text-3xl py-2 mb-5">是否遇到过类似这样的状况.......</h2>
+  </div>
+  <div class="xs:grid s:grid xs:grid-cols-2 s:grid-cols-2 mx-20 ">
+  
+    <div class="">
+      <div class="xs:col-span-2 s:col-span-2">
+        <img class="w-full" src="./assets/images/problem/problem1.png" alt="">
+      </div>
+      <div class="xs:col-span-2 s:col-span-2">
+        <img class="w-full" src="./assets/images/problem/problem2.png" alt="">
+      </div>
+    </div>
+    <div class="">
+      <div class="xs:col-span-2 s:col-span-2">
+        <img class="w-full" src="./assets/images/problem/problem3.png" alt="">
+      </div>
+      <div class="xs:col-span-2 s:col-span-2">
+        <img class="w-full" src="./assets/images/problem/problem4.png" alt="">
+      </div>
+    </div>
+  </div>
+
+  <div class="s:block md:hidden summary-text">
+    <p class="s:text-base xs:text-base text-center text-gray-500 my-5">
+      这些问题可能让您感到困惑和无助，但您并不孤单。
+      <br>
+      让我们一起经过远古智慧与现代科技，
+      <br>
+      支持您便捷、高质量的管理好自己和家人的健康!
+    </p>
+  </div>
+</section>
+
+<section id="problem" class="xs:hidden s:hidden md:block lg:block xl:block">
+  <div class="2xl:hidden lg:hidden grid px-10 mx-auto text-center justify-center title">
+    <h2 class="xs:text-3xl text-2xl m-5">在您以往的生活中,<br>
+       是否遇到过类似这样的状况.......</h2>
+  </div>
+
+  <div class="2xl:hidden lg:block md:hidden s:hidden xs:hidden grid px-10 mx-auto text-center justify-center title">
+    <h2 class="lg:text-3xl m-5">在您以往的生活中，是否遇到过类似这样的状况.......</h2>
+  </div>
+
+  <div class="2xl:block lg:hidden md:hidden s:hidden xs:hidden grid px-10 mx-auto text-center justify-center title">
+    <h2 class="2xl:text-5xl mt-20">在您以往的生活中,
+       是否遇到过类似这样的状况.......</h2>
+  </div>
+  <div class="2xl:hidden xs:flex md:hidden s:hidden xs:hidden s:grid-cols-4 s:grid-rows-2 grid mx-auto justify-center">
+    <div></div>
+    <div class="row-span-1">
+      <div class="s:col-span-2">
+        <img src="./assets/images/problem/problem1.png" alt="">
+      </div>
+      <div class="s:col-span-2">
+        <img src="./assets/images/problem/problem2.png" alt="">
+      </div>
+    </div>
+    <div class="row-span-1">
+      <div class="s:col-span-2">
+        <img src="./assets/images/problem/problem3.png" alt="">
+      </div>
+      <div class="s:col-span-2">
+        <img src="./assets/images/problem/problem4.png" alt="">
+      </div>
+    </div>
+  </div>
+
+  <div class="2xl:flex md:hidden s:hidden xs:hidden lg:hidden mx-auto justify-center my-16">
+    <div class="col-span-1">
+        <img class="w-96" src="./assets/images/problem/problem1.png" alt="">
+      </div>
+      <div class="col-span-1">
+        <img class="w-96"  src="./assets/images/problem/problem2.png" alt="">
+      </div>
+      <div class="col-span-1">
+        <img class="w-96"  src="./assets/images/problem/problem3.png" alt="">
+      </div>
+      <div class="col-span-1">
+        <img class="w-96"  src="./assets/images/problem/problem4.png" alt="">
+      </div>
+  </div>
+
+  <div class="s:hidden md:flex s:hidden xs:hidden lg:flex lg:w-2/3 2xl:hidden justify-center mx-auto grid-cols-4 grid-rows-1">
+    <div class="lg:w-full col-span-1 row-span-1">
+      <img class="mx-auto" src="./assets/images/problem/problem1.png" alt="">
+    </div>
+    <div class="lg:w-full col-span-1 row-span-1">
+      <img class="mx-auto" src="./assets/images/problem/problem2.png" alt="">
+    </div>
+    <div class="lg:w-full col-span-1 row-span-1">
+      <img class="mx-auto" src="./assets/images/problem/problem3.png" alt="">
+    </div>
+    <div class="lg:w-full col-span-1 row-span-1">
+      <img class="mx-auto" src="./assets/images/problem/problem4.png" alt="">
+    </div>
+  </div>
+
+  <div class="s:block md:hidden container mx-auto summary-text">
+    <p class="2xl:hidden s:text-base text-center text-gray-500 my-5">
+      这些问题可能让您感到困惑和无助，但您并不孤单。
+      <br>
+      让我们一起经过远古智慧与现代科技，
+      <br>
+      支持您便捷、高质量的管理好自己和家人的健康!
+    </p>
+    <p class="2xl:block 2xl:text-2xl text-center text-gray-500 my-5">
+      这些问题可能让您感到困惑和无助，但您并不孤单。
+      <br>
+      让我们一起经过远古智慧与现代科技，
+      <br>
+      支持您便捷、高质量的管理好自己和家人的健康!
+    </p>
+  </div>
+
+  <div class="s:hidden md:block 2xl:hidden container mx-auto summary-text">
+    <p class="text-2xl lg:text-base  text-center text-gray-500 my-5">
+      这些问题可能让您感到困惑和无助，但您并不孤单。
+      让我们一起经过远古智慧与现代科技，
+      支持您便捷、高质量的管理好自己和家人的健康!
+    </p>
+  </div>
+</section>
+
+<!--Solution-->
+
+<section id="solution-mobile-xs" class="xs:block s:hidden md:hidden lg:hidden xl:hidden mb-5 bg-center">
+  <div class="px-10 mx-auto title">
+    <h2 class=" text-center text-white pt-12 ">远古智慧早已记载了人类完美健康的奥秘</h2>    
+  </div>
+  <h2 class="pt-2 s-max:text-2xl xs:text-2xl s:text-3xl text-white text-center">
+    基本体质 + 当下五运六气
+   <br> = 进入完美健康的精准路径</h2> 
+  <p class="pt-6 text-center text-white">了解远古智慧如何帮助自己更健康，<br> 我们将经过电邮免费发送给您：</p>
+  <div class="flex w-fit mx-auto pt-5 pb-8">   
+    <input type="text" id="email" class="w-60 text-center bg-gray-50 border  border-gray-300 text-gray-900 text-sm rounded-sm block py-1.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="请输入邮箱" required />
+    <button class="text-center inline-flex bg-[#FF9901] hover:bg-lime-300 text-white py-1.5 px-4 rounded-sm">
+    立即订阅
+    </button>
+  </div>
+</section>
+
+<section id="solution-mobile" class="xs:hidden s:block md:hidden lg:hidden xl:hidden mb-5 bg-center">
+  <div class="px-10 mx-auto title pt-10">
+    <h2 class="text-center text-white s:mt-2">远古智慧早已记载了人类完美健康的奥秘</h2>    
+  </div>
+  <h2 class="pt-2 s-max:text-2xl xs:text-xl s:text-3xl text-white text-center">
+    基本体质 + 当下五运六气
+   <br> = 进入完美健康的精准路径</h2> 
+  <p class="pt-6 text-center text-white">了解远古智慧如何帮助自己更健康，<br> 我们将经过电邮免费发送给您：</p>
+  <div class="flex w-fit mx-auto pt-5 pb-8">   
+    <input type="text" id="email" class="w-60 text-center bg-gray-50 border  border-gray-300 text-gray-900 text-sm rounded-sm block p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="请输入邮箱" required />
+    <button class="text-center inline-flex bg-[#FF9901] hover:bg-lime-300 text-white py-2 px-4 rounded-sm">
+    立即订阅
+    </button>
+  </div>
+</section>
+
+<section id="solution" class="xs:hidden s:hidden md:block 2xl:hidden mb-5 bg-center">
+  <div class="flex container px-10 mx-auto text-center justify-center title">
+    <h2 class="lg:text-xl md:text-base text-white lg:mt-12 md-max:mt-10 md:mt-5 sm:mt-0 ">远古智慧早已记载了人类完美健康的奥秘</h2>    
+  </div>
+  <h2 class="lg:text-3xl md-max:text-2xl md:text-xl s:text-base text-white text-center mt-8">基本体质
+    +
+    当下五运六气
+    =
+    进入完美健康的精准路径</h2> 
+  <p class="text-xl text-center text-white mt-15 lg:mt-20 md:mt-8">了解远古智慧如何帮助自己更健康，我们将经过电邮免费发送给您：</p>
+  <div class="flex lg:w-fit mx-auto justify-center pt-5 pb-8">   
+    <input type="text" id="email" class="w-96 lg:w-96 text-center bg-gray-50 border  border-gray-300 text-gray-900 text-sm rounded-sm block p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="请输入邮箱" required />
+    <button class="lg:w-fit lg:text-base text-center inline-flex bg-[#FF9901] hover:bg-lime-300 text-white py-2 px-4 rounded-sm">
+    立即订阅
+    </button>
+  </div>
+</section>
+
+<section id="solution" class="xs:hidden s:hidden md:hidden 2xl:block mb-5 bg-center h-[680px]">
+  <div class="flex container px-10 mx-auto text-center justify-center title">
+    <h2 class="2xl:text-4xl 2xl:mt-20 text-white lg:mt-12 md-max:mt-10 md:mt-5 sm:mt-0 ">远古智慧早已记载了人类完美健康的奥秘</h2>    
+  </div>
+  <h2 class="2xl:text-6xl 2xl:mt-20 text-white text-center">基本体质
+    +
+    当下五运六气
+    =
+    进入完美健康的精准路径</h2> 
+  <p class="text-center text-white 2xl:text-4xl 2xl:mt-36">了解远古智慧如何帮助自己更健康，我们将经过电邮免费发送给您：</p>
+  <div class="flex lg:w-fit mx-auto justify-center pt-12 pb-8">   
+    <input type="text" id="email" class="2xl:w-[1200px] 2xl:text-3xl lg:w-96 text-center bg-gray-50 border  border-gray-300 text-gray-900 rounded-s-xl rounded-e-none block py-6 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="请输入邮箱" required />
+    <button class="2xl:w-1/3 2xl:text-3xl justify-center items-center inline-flex bg-[#FF9901] hover:bg-lime-300 text-white py-6 px-4 rounded-s-none rounded-e-xl">
+    立即订阅
+    </button>
+  </div>
+</section>
+
+<!--Testimonial-->
+
+<section id="testimonial-mobile" class="xs:block s:block md:hidden lg:hidden xl:hidden 2xl:hidden mb-5">
+  <div><p class="block py-5 xs:text-2xl s:text-3xl text-center">聆听用户反馈</p></div>
+
+<!--Carousel Mobile-->
+<div id="gallery-wrap" class="xs:flex xs:mx-2 s:flex s:mx-20 md:hidden justify-center items-center">
+  <img src="./assets/images/testimonial/arrow-left.png" class="justify-items-center items-center px-5" id="leftBtn" alt="">
+  <div id="gallery overflow-x-auto grid" class="flex mt-10">
+    <div class="border text-center inline-block rounded shadow-lg" id="card">
+      <span>
+        <img class="mx-auto -mt-5" src="./assets/images/testimonial/profile1.png" alt=""></span>
+        <p class="pt-5">春晓</p>
+        <p class="px-5 s:text-sm lg:px-10 md:px-5 lg:text-sm md:text-xs py-5 text-gray-600">我今年75岁，生活在中国东北，听朋友说有个平台，只需输入出生时间和地点，就能检测到身体基本体质和健康状况，我很好奇，参与检测的报告结果让我很震惊，检测的数据跟我的身体状况完全相符，太神奇了!</p>
+    </div>
+  </div>
+  <img src="./assets/images/testimonial/arrow-right.png"  class="px-5" id="rightBtn" alt="">
+</div>
+</section>
+
+<section id="testimonial" class="xs:hidden s:hidden md:block lg:block xl:block 2xl:hidden mb-5">
+  <div><p class="block py-5 lg:text-3xl md:text-3xl sm:text-3xl s:text-3xl text-center">聆听用户反馈</p></div>
+
+<!--Carousel Laptop-->
+  <div id="gallery-wrap" class="s:hidden md:flex justify-center items-center">
+    <img src="./assets/images/testimonial/arrow-left.png" class="px-5" id="leftBtn" alt="">
+    <div id="gallery overflow-x-auto grid" class="flex mt-10 lg:mx-20 md:mx-5">
+      <div class="border text-center inline-block mx-3 rounded shadow-lg" id="card">
+        <span>
+          <img class="mx-auto -mt-5" src="./assets/images/testimonial/profile1.png" alt=""></span>
+          <p class="pt-5">春晓</p>
+          <p class="px-5 s:text-sm lg:px-10 md:px-5 lg:text-sm md:text-xs py-5 text-gray-600">我今年75岁，生活在中国东北，听朋友说有个平台，只需输入出生时间和地点，就能检测到身体基本体质和健康状况，我很好奇，参与检测的报告结果让我很震惊，检测的数据跟我的身体状况完全相符，太神奇了!</p>
+      </div>
+      <div class="border text-center inline-block mx-3 rounded shadow-lg" id="card">
+        <span>
+          <img class="mx-auto -mt-5" src="./assets/images/testimonial/profile2.png" alt=""></span>
+        <p class="pt-5">LISA</p>
+        <p class="px-5 s:text-sm lg:px-10 md:px-5  text-sm py-5 text-gray-600">我是生活在马来西亚的中国人,我用【健康预报】平台测试了全家人的基本体质和今日身体状况，都非常准确。我计划用这个平台的健康预告服务，管理好全家人的健康，让全家人的饮食更有质量，身体更健康，感谢平台提供的服务。</p>
+      </div>
+      <div class="border text-center inline-block mx-3 rounded shadow-lg" id="card">
+        <span>
+          <img class="mx-auto -mt-5" src="./assets/images/testimonial/profile3.png" alt=""></span>
+        <p class="pt-5">亚茹</p>
+        <p class="px-5 s:text-sm lg:px-10 md:px-5  text-sm py-5 text-gray-600">我来自中国,今年70岁,听一个朋友谈到【健康预报】平台,只要输入出生日期，生活地点的准确信息，就能获得基本体质和身体健康状况报告，报告中提到的每一条跟我的身体状况完全相符，果然非常准确。</p>
+      </div>
+    </div>
+    <img src="./assets/images/testimonial/arrow-right.png"  class="px-5" id="rightBtn" alt="">
+  </div>
+</section>
+
+<section id="testimonial" class="xs:hidden s:hidden md:hidden lg:hidden xl:hidden 2xl:block mb-5">
+  <div><p class="block py-12 text-5xl text-center">聆听用户反馈</p></div>
+
+<!--Carousel TV-->
+  <div id="gallery-wrap" class="flex justify-center items-center w-2/3 mx-auto mb-16">
+    <img src="./assets/images/testimonial/arrow-left.png" class="px-5" id="leftBtn" alt="">
+    <div id="gallery overflow-x-auto grid" class="flex mt-10 2xl:mx-1">
+      <div class="border text-center inline-block mx-12 rounded-xl shadow-lg" id="card">
+        <span>
+          <img class="mx-auto -mt-5 " src="./assets/images/testimonial/profile1.png" alt=""></span>
+          <p class="pt-5 2xl:text-3xl">春晓</p>
+          <p class="px-16 2xl:text-xl py-5 text-gray-600">我今年75岁，生活在中国东北，听朋友说有个平台，只需输入出生时间和地点，就能检测到身体基本体质和健康状况，我很好奇，参与检测的报告结果让我很震惊，检测的数据跟我的身体状况完全相符，太神奇了!</p>
+      </div>
+      <div class="border text-center inline-block mx-3 rounded shadow-lg" id="card">
+        <span>
+          <img class="mx-auto -mt-5" src="./assets/images/testimonial/profile2.png" alt=""></span>
+        <p class="pt-5 2xl:text-3xl">LISA</p>
+        <p class="px-16 2xl:text-xl py-5 text-gray-600">我是生活在马来西亚的中国人,我用【健康预报】平台测试了全家人的基本体质和今日身体状况，都非常准确。我计划用这个平台的健康预告服务，管理好全家人的健康，让全家人的饮食更有质量，身体更健康，感谢平台提供的服务。</p>
+      </div>
+      <div class="border text-center inline-block mx-3 rounded shadow-lg" id="card">
+        <span>
+          <img class="mx-auto -mt-5" src="./assets/images/testimonial/profile3.png" alt=""></span>
+        <p class="pt-5 2xl:text-3xl">亚茹</p>
+        <p class="px-16 2xl:text-xl text-sm py-5 text-gray-600">我来自中国,今年70岁,听一个朋友谈到【健康预报】平台,只要输入出生日期，生活地点的准确信息，就能获得基本体质和身体健康状况报告，报告中提到的每一条跟我的身体状况完全相符，果然非常准确。</p>
+      </div>
+    </div>
+    <img src="./assets/images/testimonial/arrow-right.png"  class="px-5" id="rightBtn" alt="">
+  </div>
+</section>
+
+<!--Disclaimer-->
+
+<section id="disclaimer" class="xs:block s:block md:hidden lg:hidden xl:hidden 2xl:hidden">
+  <p class="text-center bg-blue-100 s:text-base xs:py-2 xs:px-20 s:py-2 s:px-5">郑重声明: 本网站信息及报告仅供参考，本项服务不作为您的医生，也不提供任何医疗服务。相关医疗服务请咨询您的医生。</p>
+</section>
+
+<section id="disclaimer" class="xs:hidden s:hidden md:block lg:block xl:block 2xl:hidden">
+  <p class="text-center bg-blue-100 text-sm lg:py-2">郑重声明: 本网站信息及报告仅供参考，本项服务不作为您的医生，也不提供任何医疗服务。相关医疗服务请咨询您的医生。</p>
+</section>
+
+<section id="disclaimer" class="xs:hidden s:hidden md:hidden lg:hidden xl:hidden lg:block 2xl:block">
+  <p class="text-center bg-blue-100 text-2xl lg:py-8">郑重声明: 本网站信息及报告仅供参考，本项服务不作为您的医生，也不提供任何医疗服务。相关医疗服务请咨询您的医生。</p>
+</section>
+
+<!--Footer-->
+
+<footer class="bg-[#633E23] text-white xs:block s:hidden md:hidden lg:hidden xl:hidden 2xl:hidden" id="footer-mobile-xs">
+  <div class="grid xs:grid-cols-4 px-16">
+    <!--<div class="
+    xs:col-end-4 xs:row-end-7 xs:col-span-2
+    ">
+    <img class="s:pt-5 xs:w-[560px]" src="./assets/images/footer/vector.png" alt="">
+    </div>-->
+
+    <div class="
+    xs:col-span-3
+    "> 
+      <img class="xs:px-5 xs:pt-10" src="./assets/images/footer/logo-darkbg.png" alt="">
+      
+    </div>
+    <hr class="col-span-4 h-px my-8 bg-gray-200 border-0 dark:bg-gray-700">
+    <div class="
+    xs:col-span-3
+    xs:pr-10 s:px-10
+    pb-10
+    ">
+    <p class="text-lg font-bold pb-3">产品</p>
+    <ul>
+      <li class="md:text-xs lg:text-sm py-1">
+        <a href="">基本体质测试</a>
+      </li>
+      <li class="md:text-xs lg:text-sm py-1">
+        <a href="">本运季健康报告</a>
+      </li>
+      <li class="md:text-xs lg:text-sm py-1">
+        <a href="">健康报告</a>
+      </li>
+      <li class="md:text-xs lg:text-sm py-1">
+        <a href="">服务范围</a>
+      </li>
+      <li class="md:text-xs lg:text-sm py-1">
+        <a href="">FAQ常见问题解答</a>
+      </li>
+    </ul>
+    </div>
+    <div class="
+    xs:col-span-3
+    xs:pr-10 s:px-10
+    pb-10
+    ">
+    <p class="text-lg font-bold pb-3">会员</p>
+    <ul>
+      <li class="md:text-xs lg:text-sm py-1">
+        <a href="">会员区</a>
+      </li>
+      <li class="md:text-xs lg:text-sm py-1">
+        <a href="">健康日记</a>
+      </li>
+      <li class="md:text-xs lg:text-sm py-1">
+        <a href="">健康规划和管理</a>
+      </li>
+      <li class="md:text-xs lg:text-sm py-1">
+        <a href="">提建议</a>
+      </li>
+      <li class="md:text-xs lg:text-sm py-1">
+        <a href="">提交客户见证</a>
+      </li>
+    </ul>
+    </div>
+    <div class="
+    xs:col-span-4
+    xs:pr-0 s:px-10
+    pb-10
+    ">
+      <p class="text-lg font-bold pb-3">联系与合作</p>
+      <ul>
+        <li class="md:text-xs lg:text-sm py-1">
+          <a href="">个人提问及联系</a>
+        </li>
+        <li class="md:text-xs lg:text-sm py-1">
+          <a href="affiliate.html">个人创业机会</a>
+        </li>
+        <li class="md:text-xs lg:text-sm py-1">
+          <a href="">企业合作</a>
+          <img class="ml-auto -mt-32 justify-end items-start top-0 right-0 w-1/2" src="./assets/images/footer/vector.png" alt="">
+
+        </li>
+      </ul>
+
+    </div>
+  </div>
+</footer>
+
+<footer class="bg-[#633E23] text-white xs:hidden s:block md:hidden lg:hidden xl:hidden 2xl:hidden" id="footer-mobile">
+  <div class="grid s:grid-cols-3 md:grid-rows-2">
+    <div class="
+    s:col-end-4 s:row-end-5 s:col-span-1
+    ">
+    <img class="s:pt-5 md:pt-10 lg:pt-10 xl:pt-15" src="./assets/images/footer/vector.png" alt="">
+    </div>
+
+    <div class="
+    s:row-span-1
+    s:col-span-1
+    "> 
+      <img class="xs:px-10 s:px-10 s:pt-10 xs:pt-10" src="./assets/images/footer/logo-darkbg.png" alt="">
+      
+    </div>
+
+    <div class="py-10
+    s:col-span-2
+    ">
+      <hr class="h-px my-8 bg-gray-200 border-0 dark:bg-gray-700">
+    </div>
+
+    <div class="
+    s:col-span-2
+    xs:px-10 s:px-10
+    pb-10
+    ">
+    <p class="text-lg font-bold pb-3">产品</p>
+    <ul>
+      <li class="md:text-xs lg:text-sm py-1">
+        <a href="">基本体质测试</a>
+      </li>
+      <li class="md:text-xs lg:text-sm py-1">
+        <a href="">本运季健康报告</a>
+      </li>
+      <li class="md:text-xs lg:text-sm py-1">
+        <a href="">健康报告</a>
+      </li>
+      <li class="md:text-xs lg:text-sm py-1">
+        <a href="">服务范围</a>
+      </li>
+      <li class="md:text-xs lg:text-sm py-1">
+        <a href="">FAQ常见问题解答</a>
+      </li>
+    </ul>
+    </div>
+    <div class="
+    s:col-span-2
+    xs:px-10 s:px-10
+    pb-10
+    ">
+    <p class="text-lg font-bold pb-3">会员</p>
+    <ul>
+      <li class="md:text-xs lg:text-sm py-1">
+        <a href="">会员区</a>
+      </li>
+      <li class="md:text-xs lg:text-sm py-1">
+        <a href="">健康日记</a>
+      </li>
+      <li class="md:text-xs lg:text-sm py-1">
+        <a href="">健康规划和管理</a>
+      </li>
+      <li class="md:text-xs lg:text-sm py-1">
+        <a href="">提建议</a>
+      </li>
+      <li class="md:text-xs lg:text-sm py-1">
+        <a href="">提交客户见证</a>
+      </li>
+    </ul>
+    </div>
+    <div class="
+    s:col-span-2
+    xs:px-10 s:px-10
+    pb-10
+    ">
+      <p class="text-lg font-bold pb-3">联系与合作</p>
+      <ul>
+        <li class="md:text-xs lg:text-sm py-1">
+          <a href="">个人提问及联系</a>
+        </li>
+        <li class="md:text-xs lg:text-sm py-1">
+          <a href="affiliate.html">个人创业机会</a>
+        </li>
+        <li class="md:text-xs lg:text-sm py-1">
+          <a href="">企业合作</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</footer>
+
+<footer class="bg-[#633E23] text-white xs:hidden s:hidden md:block lg:hidden xl:hidden 2xl:hidden" id="footer">
+  <div class="grid md:grid-cols-5 md:grid-rows-2">
+    <div class="
+    md:row-span-2 md:col-span-2
+    mx-auto 
+    "><img class="s:pt-5 md:pt-10 lg:pt-10 xl:pt-15" src="./assets/images/footer/vector.png" alt=""></div>
+
+    <div class="
+    md:row-span-1
+    md:col-span-3
+    py-0 my-0
+    "> 
+      <img class="md:pt-10 lg:pt-5 xl:pt-15" src="./assets/images/footer/logo-darkbg.png" alt="">
+      <hr class="flex w-full h-px my-8 bg-gray-200 border-0 dark:bg-gray-700">
+    </div>
+
+    <div class="
+    md:row-span-1
+    pb-5
+    ">
+    <p class="md:text-sm text-base font-bold pb-3">产品</p>
+    <ul>
+      <li class="md:text-xs lg:text-sm py-1">
+        <a href="">基本体质测试</a>
+      </li>
+      <li class="md:text-xs lg:text-sm py-1">
+        <a href="">本运季健康报告</a>
+      </li>
+      <li class="md:text-xs lg:text-sm py-1">
+        <a href="">健康报告</a>
+      </li>
+      <li class="md:text-xs lg:text-sm py-1">
+        <a href="">服务范围</a>
+      </li>
+      <li class="md:text-xs lg:text-sm py-1">
+        <a href="">FAQ常见问题解答</a>
+      </li>
+    </ul>
+    </div>
+    <div class="
+    md:row-span-1
+
+    ">
+    <p class="text-base font-bold pb-3">会员</p>
+    <ul>
+      <li class="md:text-xs lg:text-sm py-1">
+        <a href="">会员区</a>
+      </li>
+      <li class="md:text-xs lg:text-sm py-1">
+        <a href="">健康日记</a>
+      </li>
+      <li class="md:text-xs lg:text-sm py-1">
+        <a href="">健康规划和管理</a>
+      </li>
+      <li class="md:text-xs lg:text-sm py-1">
+        <a href="">提建议</a>
+      </li>
+      <li class="md:text-xs lg:text-sm py-1">
+        <a href="">提交客户见证</a>
+      </li>
+    </ul>
+    </div>
+    <div class="
+    md:row-span-1
+
+    ">
+      <p class="text-base font-bold pb-3">联系与合作</p>
+      <ul>
+        <li class="md:text-xs lg:text-sm py-1">
+          <a href="">个人提问及联系</a>
+        </li>
+        <li class="md:text-xs lg:text-sm py-1">
+          <a href="affiliate.html">个人创业机会</a>
+        </li>
+        <li class="md:text-xs lg:text-sm py-1">
+          <a href="">企业合作</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</footer>
+
+
+<footer class="bg-[#633E23] text-white xs:hidden s:hidden md:hidden lg:block xl:block 2xl:hidden" id="footer">
+  <div class="grid md:grid-cols-5 md:grid-rows-2">
+    <div class="
+    md:row-span-2 md:col-span-2
+    mx-auto 
+    "><img class="s:pt-5 md:pt-10 lg:pt-10 xl:pt-15" src="./assets/images/footer/vector.png" alt=""></div>
+
+    <div class="
+    md:row-span-1
+    md:col-span-3
+    py-0 my-0
+    "> 
+      <img class="md:pt-10 lg:pt-5 xl:pt-15" src="./assets/images/footer/logo-darkbg.png" alt="">
+      <hr class="flex w-full h-px my-8 bg-gray-200 border-0 dark:bg-gray-700">
+    </div>
+
+    <div class="
+    md:row-span-1
+    pb-5
+    ">
+    <p class="md:text-sm text-base font-bold pb-3">产品</p>
+    <ul>
+      <li class="md:text-xs lg:text-sm py-1">
+        <a href="">基本体质测试</a>
+      </li>
+      <li class="md:text-xs lg:text-sm py-1">
+        <a href="">本运季健康报告</a>
+      </li>
+      <li class="md:text-xs lg:text-sm py-1">
+        <a href="">健康报告</a>
+      </li>
+      <li class="md:text-xs lg:text-sm py-1">
+        <a href="">服务范围</a>
+      </li>
+      <li class="md:text-xs lg:text-sm py-1">
+        <a href="">FAQ常见问题解答</a>
+      </li>
+    </ul>
+    </div>
+    <div class="
+    md:row-span-1
+
+    ">
+    <p class="text-base font-bold pb-3">会员</p>
+    <ul>
+      <li class="md:text-xs lg:text-sm py-1">
+        <a href="">会员区</a>
+      </li>
+      <li class="md:text-xs lg:text-sm py-1">
+        <a href="">健康日记</a>
+      </li>
+      <li class="md:text-xs lg:text-sm py-1">
+        <a href="">健康规划和管理</a>
+      </li>
+      <li class="md:text-xs lg:text-sm py-1">
+        <a href="">提建议</a>
+      </li>
+      <li class="md:text-xs lg:text-sm py-1">
+        <a href="">提交客户见证</a>
+      </li>
+    </ul>
+    </div>
+    <div class="
+    md:row-span-1
+
+    ">
+      <p class="text-base font-bold pb-3">联系与合作</p>
+      <ul>
+        <li class="md:text-xs lg:text-sm py-1">
+          <a href="">个人提问及联系</a>
+        </li>
+        <li class="md:text-xs lg:text-sm py-1">
+          <a href="affiliate.html">个人创业机会</a>
+        </li>
+        <li class="md:text-xs lg:text-sm py-1">
+          <a href="">企业合作</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</footer>
+
+<footer class="bg-[#633E23] text-white xs:hidden s:hidden md:hidden lg:hidden xl:hidden 2xl:block" id="footer">
+  <div class="grid md:grid-cols-5 md:grid-rows-2 mr-56">
+    <div class="
+    md:row-span-2 md:col-span-2
+    mx-auto 
+    "><img class="pt-36 ml-48 w-2/3" src="./assets/images/footer/vector.png" alt=""></div>
+
+    <div class="
+    md:row-span-1
+    md:col-span-3
+    py-0 my-0
+    "> 
+      <img class="2xl:pt-16 w-1/5" src="./assets/images/footer/logo-darkbg.png" alt="">
+      <hr class="flex w-full h-px my-8 bg-gray-200 border-0 dark:bg-gray-700">
+    </div>
+
+    <div class="
+    md:row-span-1
+    pb-5
+    ">
+    <p class="text-3xl font-bold pb-3">产品</p>
+    <ul>
+      <li class="text-xl py-1">
+        <a href="">基本体质测试</a>
+      </li>
+      <li class="text-xl py-1">
+        <a href="">本运季健康报告</a>
+      </li>
+      <li class="text-xl py-1">
+        <a href="">健康报告</a>
+      </li>
+      <li class="text-xl py-1">
+        <a href="">服务范围</a>
+      </li>
+      <li class="text-xl py-1">
+        <a href="">FAQ常见问题解答</a>
+      </li>
+    </ul>
+    </div>
+    <div class="
+    md:row-span-1
+
+    ">
+    <p class="text-3xl font-bold pb-3">会员</p>
+    <ul>
+      <li class=text-xl py-1">
+        <a href="">会员区</a>
+      </li>
+      <li class="text-xl py-1">
+        <a href="">健康日记</a>
+      </li>
+      <li class=text-xl py-1">
+        <a href="">健康规划和管理</a>
+      </li>
+      <li class="vpy-1">
+        <a href="">提建议</a>
+      </li>
+      <li class="text-xl  py-1">
+        <a href="">提交客户见证</a>
+      </li>
+    </ul>
+    </div>
+    <div class="
+    md:row-span-1
+
+    ">
+      <p class="text-3xl font-bold pb-3">联系与合作</p>
+      <ul>
+        <li class="text-xl py-1">
+          <a href="">个人提问及联系</a>
+        </li>
+        <li class="text-xl y-1">
+          <a href="affiliate.html">个人创业机会</a>
+        </li>
+        <li class="text-xl py-1">
+          <a href="">企业合作</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</footer>
+
+<div class="bg-[#633E23] text-white xs:block 2xl:hidden">
+  <hr class=" h-px bg-gray-200 border-0 dark:bg-gray-700">
+  <div>
+    <p class="text-sm py-5 text-center">© 2024. 健康预报</p>
+  </div>
+</div>
+
+<div class="bg-[#633E23] text-white xs:hidden sm:hidden xl:hidden 2xl:block">
+  <hr class="h-px bg-gray-200 border-0 dark:bg-gray-700">
+  <div>
+    <p class="text-xl py-5 text-center">© 2024. 健康预报</p>
+  </div>
+</div>
+
+
+
+<script src="https://cdn.tailwindcss.com"></script>
+<script src="script/script.js"></script>
+<script src="script/main.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script>
+
+
+
+/*=============== MODAL Javascript ===============*/
+// Get the modal
+var modal = document.getElementById("myModal");
+
+// Get the button that opens the modal
+var btn = document.getElementById("myBtn");
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks on the button, open the modal
+btn.onclick = function() {
+  modal.style.display = "block";
+}
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+  modal.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+
+
+// Get the modal 2 javascript
+var modal2 = document.getElementById("myModal2");
+
+// Get the button that opens the modal
+var btn2 = document.getElementById("myBtn2");
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close2")[0];
+
+// When the user clicks on the button, open the modal
+btn2.onclick = function() {
+  modal2.style.display = "block";
+}
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+  modal2.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window2.onclick = function(event) {
+  if (event.target == modal2) {
+    modal2.style.display = "none";
+  }
+}
+
+
+
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            secondary: '#633E23',
+            green: '#78B631',
+          }
+        },
+        screens: {
+          'xs': '0px',
+          // => @media (max-width: 576px) { mobile potrait }
+
+          's': '576px',
+          // => @media (min-width: 576px, max-width: 767px) { mobile landscape }
+          's-max': '767px',
+          // => @media (min-width: 576px, max-width: 767px) { mobile landscape }
+
+          'md': '768px',
+          // => @media (min-width: 768px, max-width: 1200px) { tablet }
+          'md-max': '1200px',
+          // => @media (min-width: 768px, max-width: 1200px) { tablet }
+
+          'lg': '1201px',
+          // => @media (min-width: 1201px, max-width: 1380px) { laptop }
+          'lg-max': '1380px',
+          // => @media (min-width: 1201px, max-width: 1380px) { laptop }
+
+
+          'xl': '1381px',
+          // => @media (min-width: 1381px, max-width: 1500px) { pc }
+          'xl-max': '1500px',
+          // => @media (min-width: 1381px, max-width: 1500px) { pc }
+
+          '2xl': '1501px',
+          // => @media (min-width: 1501px, max-width: 2590px) { tv }
+      
+        }
+      }
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,1219 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>认识健康预报</title>
+  <link rel="stylesheet" type="text/css" href="style/custom.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" rel="stylesheet"/>
+</head>
+
+<body class="mx-auto">
+        <!--Header-->
+        
+        <header class="xs:hidden s:hidden md:hidden lg:hidden 2xl:block">
+            <div class="container justify-center items-center mx-auto">
+              <nav class="relative py-10 flex justify-between items-center bg-white">
+                <a class="" href="#">
+                  <img src="./assets/images/logo-large.png" class="w-64 px-6" alt="logo">
+                </a>
+                <div class="lg:hidden lg:ml-auto absolute right-0 bottom-0 items-center">
+                  <button class="navbar-burger flex p-5">
+                    <svg class="block xs:h-8 xs:w-8 s:h-8 s:w-8 fill-current" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                      <title>Mobile menu</title>
+                      <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"></path>
+                    </svg>
+                  </button>
+                </div>
+                <ul class="hidden absolute top-1/2 left-1/2 transform -translate-y-1/2 -translate-x-1/2 lg:flex lg:mx-auto lg:items-center lg:w-auto space-x-8">
+                  <li><a class="2xl:text-3xl hover:text-lime-400" href="index.html">首页</a></li>
+                  <li><a class="2xl:text-3xl hover:text-lime-400" href="intro.html">健康预报</a></li>
+                  <li><a class="2xl:text-3xl hover:text-lime-400" href="#">服务范围</a></li>
+                  <li><a class="2xl:text-3xl hover:text-lime-400" href="#">创业机会</a></li>
+                  <li><a class="2xl:text-3xl hover:text-lime-400" href="#">会员区</a></li>
+                </ul>
+                <div>
+                  <button class="hidden py-auto lg:inline-block lg:ml-auto lg:mr-3 py-5 px-16 bg-gray-50 hover:bg-gray-100 text-4xl text-gray-900 font-bold transition duration-200 bg-[#9BE642] rounded-xl text-black hover:bg-lime-400">登录</button>
+                </div>
+              </nav>
+              <div class="navbar-menu relative z-50 hidden">
+                <div class="navbar-backdrop fixed inset-0 bg-gray-800 opacity-25"></div>
+                <nav class="fixed top-0 left-0 bottom-0 flex flex-col w-5/6 max-w-sm py-6 px-6 bg-white border-r overflow-y-auto">
+                  <div class="flex items-center mb-8">
+                      <a class="" href="#">
+                        <img src="./assets/images/logo.svg" class="lg:w-2/3 md:2/3" alt="logo">
+                      </a>
+                    <button class="navbar-close">
+          
+                    </button>
+                  </div>
+                  <div id="mobile-menu">
+                    <ul>
+                      <li class="mb-1">
+                        <a class="text-sm py-4 hover:text-lime-400" href="index.html">首页</a>
+                      <li class="mb-1">
+                        <li><a class="text-sm py-4 hover:text-lime-400" href="intro.html">健康预报</a></li>
+                      </li>
+                      <li class="mb-1">
+                        <li><a class="text-sm py-4 hover:text-lime-400" href="#">服务范围</a></li>
+                      </li>
+                      <li class="mb-1">
+                        <li><a class="text-sm py-4 hover:text-lime-400" href="#">创业机会</a></li>
+                      </li>
+                      <li class="mb-1">
+                        <li><a class="text-sm py-4 hover:text-lime-400" href="#">会员区</a></li>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="mt-10">
+                    <div class="pt-6">
+                      <a class="hidden lg:inline-block lg:ml-auto lg:mr-3 py-2 px-6 bg-gray-50 hover:bg-gray-100 text-sm text-gray-900 font-bold  rounded-xl transition duration-200 bg-[#9BE642] rounded-sm px-4 py-2 text-black hover:bg-lime-400">登录</a>
+                      <a class="block px-4 py-3 mb-3 leading-loose text-xs text-center font-semibold leading-none bg-white hover:bg-lime-400 rounded-sm" href="#">登录</a>
+                      <a class="block px-4 py-3 mb-2 leading-loose text-xs text-center text-white font-semibold bg-[#9BE642] hover:bg-lime-400  rounded-sm" href="#">注册</a>
+                    </div>
+                    <p class="my-4 text-xs text-center text-gray-400">
+                      <span>©2024.健康预报</span>
+                    </p>
+                  </div>
+                </nav>
+              </div>
+            </div>
+          </header>
+          
+        <header class="2xl:hidden">
+            <div class="container justify-center items-center xs:my-5 mx-auto">
+              <nav class="relative px-6 py-3 flex justify-between items-center bg-white lg:w-2/3 lg:mx-auto">
+                <a class="" href="#">
+                  <img src="./assets/images/logo.svg" class="s:w-36 xs:w-21" alt="logo">
+                </a>
+                <div class="lg:hidden lg:ml-auto absolute right-0 items-center">
+                  <button class="navbar-burger flex p-5">
+                    <svg class="block h-4 w-4 fill-current" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                      <title>Mobile menu</title>
+                      <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"></path>
+                    </svg>
+                  </button>
+                </div>
+                <ul class="hidden absolute top-1/2 left-1/2 transform -translate-y-1/2 -translate-x-1/2 lg:flex lg:mx-auto lg:flex lg:items-center lg:w-auto lg:space-x-6">
+                  <li><a class="text-base hover:text-lime-400" href="index.html">首页</a></li>
+                  <li><a class="text-base hover:text-lime-400" href="intro.html">健康预报</a></li>
+                  <li><a class="text-base hover:text-lime-400" href="#">服务范围</a></li>
+                  <li><a class="text-base hover:text-lime-400" href="#">创业机会</a></li>
+                  <li><a class="text-base hover:text-lime-400" href="#">会员区</a></li>
+                </ul>
+                <div>
+                  <button class="hidden lg:inline-block lg:ml-auto lg:mr-3 py-2 px-6 bg-[#9BE642] hover:bg-gray-100 text-sm text-gray-900 font-bold transition duration-200 rounded-sm px-4 py-2 text-black hover:bg-lime-400">登录</button>
+                </div>
+              </nav>
+              <div class="navbar-menu relative z-50 hidden">
+                <div class="navbar-backdrop fixed inset-0 bg-gray-800 opacity-25"></div>
+                <nav class="fixed top-0 left-0 bottom-0 flex flex-col w-5/6 max-w-sm py-6 px-6 bg-white border-r overflow-y-auto">
+                  <div class="flex items-center mb-8">
+                      <a class="" href="#">
+                        <img src="./assets/images/logo-large.png" class="xs:w-28 s:2/3" alt="logo">
+                      </a>
+                    <button class="navbar-close">
+          
+                    </button>
+                  </div>
+                  <div id="mobile-menu">
+                    <ul>
+                      <li class="mb-1">
+                        <a class="text-base py-4 hover:text-lime-400" href="index.html">首页</a>
+                      <li class="mb-1">
+                        <li><a class="text-base py-4 hover:text-lime-400" href="intro.html">健康预报</a></li>
+                      </li>
+                      <li class="mb-1">
+                        <li><a class="text-base py-4 hover:text-lime-400" href="#">服务范围</a></li>
+                      </li>
+                      <li class="mb-1">
+                        <li><a class="text-base py-4 hover:text-lime-400" href="#">创业机会</a></li>
+                      </li>
+                      <li class="mb-1">
+                        <li><a class="text-base py-4 hover:text-lime-400" href="#">会员区</a></li>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="mt-10">
+                    <div class="pt-6">
+                      <a class="hidden lg:inline-block lg:ml-auto lg:mr-3 py-2 px-6 bg-[#9BE642] hover:bg-gray-100 text-sm text-gray-900 font-bold  rounded-xl transition duration-200 rounded-sm px-4 py-2 text-black hover:bg-lime-400">登录</a>
+                      <a class="block px-4 py-3 mb-3 leading-loose text-base text-center font-semibold leading-none bg-white hover:bg-[#9BE642] rounded-md" href="#">登录</a>
+                      <a class="block px-4 py-3 mb-2 leading-loose text-base text-center text-white font-semibold bg-lime-600 hover:bg-lime-400  rounded-md" href="#">注册</a>
+                    </div>
+                    <p class="my-4 text-xs text-center text-gray-400">
+                      <span>©2024.健康预报</span>
+                    </p>
+                  </div>
+                </nav>
+              </div>
+            </div>
+        </header>
+        
+        <section id="affiliate-section-header" class="text-center">
+            <div class="grid grid-cols-1 mx-36 my-12">
+                <div class="xs:col-span-1 s:col-span-1 s-max:col-span-1 md:col-span-1 md-max:col-span-1 mx-auto flex justify-center items-center">
+                    <h2 class="text-2xl pt-10 pb-5 xs:text-[30px] xs:pb-10 s:text-[30px] md:text-[32px] lg:text-[36px] xl:text-[42px] lg:pb-10">创业机会</h2>    
+                </div>
+                <div class="text-center xs:px-0 s:px-1 px-10 md:pt-5">
+                    【健康预报】为您提供完善的创业平台，一个难得的商业机会。
+                </div>
+                <div class="text-center pt-10 pb-5">
+                    <button class="bg-orange-400 text-white py-1 px-10 lg:py-2 lg:px-14 rounded-md">立即申请</button>
+                </div>
+            </div>
+        </section>
+
+        <!--=======Desktop=======-->
+        <section id="affiliate-section-1" class="xs:hidden md:hidden md-max:block 2xl:block text-center mx-36">
+          <h2 class="font-semibold text-2xl lg:text-[36px] py-10">经营此项项目推广的好处是：</h2>
+          <div class="grid grid-cols-2 mx-auto my-5">
+              <div class="w-2/3 xs:col-span-2 s:col-span-2 s-max:col-span-2 md:col-span-2 md-max:col-span-1 mx-auto flex justify-center items-center">
+                 <img class="w-screen" src="./assets/images/Affiliate/affiliate-pic1.png" alt="">   
+              </div>
+              <div class="xs:col-span-2 s:col-span-2 s-max:col-span-2 md:col-span-2 md-max:col-span-1 my-auto">
+                  <div class="shadow-md rounded-md w-[100%] my-3">
+                      <p class="py-1 px-5 w-fit font-semibold text-xl md:my-2 md:py-3 xl:my-3 xl:py-5">1. 0投资，理想的回报</p>
+                  </div>
+                  <div class="shadow-md rounded-md w-[100%] my-3">
+                      <p class="py-1 px-5 w-fit text-left font-semibold text-xl md:my-2 md:py-3 xl:my-3 xl:py-5">2. 如果您有理想的人脉，或者您的公司有客户群，或您愿意努力拓展本产品营销事业， 您的成功就在眼前！</p>
+                  </div>
+                  <div class="shadow-md rounded-md w-[100%] my-3">
+                      <p class="py-1 px-5 w-fit font-semibold text-xl md:my-2 md:py-3 xl:my-3 xl:py-5">3. 任何人，任何公司都可能是您的客户：</p>
+                  </div>
+                 
+              </div>
+          </div>
+        </section>
+      
+        <!--=======Mobile 1=======*-->
+        <section id="affiliate-section-1" class="xs:block md-max:hidden text-center mx-24">
+            <h2 class="font-semibold xs:text-[20px] s:text-[20px] md:text-[30px] md-max:text-[32px] lg:text-[36px] py-10">经营此项项目推广的好处是：</h2>
+            <div class="grid grid-cols-2 mx-auto my-5">
+
+                <div class="xs:col-span-2 s:col-span-2 s-max:col-span-2 md:col-span-2 md-max:col-span-1 my-auto">
+                    <div class="shadow-md rounded-md w-[100%] my-3">
+                        <p class="py-5 px-5 xs:my-10 s:my-10 w-fit font-semibold text-lg">1. 0投资，理想的回报</p>
+                    </div>
+                    <div class="shadow-md rounded-md w-[100%] my-3">
+                        <p class="py-5 px-5 xs:my-10 s:my-10 w-fit text-left font-semibold text-lg">2. 如果您有理想的人脉，或者您的公司有客户群，或您愿意努力拓展本产品营销事业， 您的成功就在眼前！</p>
+                    </div>
+                    <div class="shadow-md rounded-md w-[100%] my-3 xs:my-10 s:my-10">
+                        <p class="pt-5 pb-5 px-5  w-fit font-semibold text-lg text-left">3. 任何人，任何公司都可能是您的客户：</p>
+                        <p class="pt-1 pb-5 px-5 w-fit text-left">
+                            独一无二的专享链接可经过电邮、微信、微博等推荐给朋友，家庭用户，医生，诊所、医院、中药店、公司用户、保险公司、保健品公司等所有关心用户群健康的个人、家庭、公司、组织或企业用户；也可以经过自己的网站、纸面广告等把您的链接发出去!
+                        </p>
+                    </div>
+                    <div class=xs:col-span-2 s:col-span-2 s-max:col-span-2 md:col-span-2 md-max:col-span-1 mx-auto flex justify-center items-center">
+                      <img class="w-screen" src="./assets/images/Affiliate/affiliate-pic1.png" alt="">   
+                   </div>
+                </div>
+            </div>
+        </section>
+       
+        <!--**=======Desktop 2=======**-->
+        <section id="affiliate-section-2" class="xs:hidden md:hidden md-max:block text-center mx-36">
+          <div class="grid grid-cols-2 mx-auto my-5 shadow-md rounded-md w-[100%] my-3">
+              <div class="xs:col-span-2 s:col-span-2 s-max:col-span-2 md:col-span-2 md-max:col-span-1 my-auto">
+                  <div class="">
+                      <p class="pt-1 pb-1 px-5 w-fit text-left">
+                        独一无二的专享二维码，没有限制的使用平台提供的海报模版,没有限制的设计自己的海报进行推荐和推广；您也可以根据品牌指导的范围规则，个性化设计自己的海报进行推广。                        </p>
+                  </div>
+              </div>
+              <div class="w-2/3 xs:col-span-2 s:col-span-2 s-max:col-span-1 md:col-span-1 md-max:col-span-1 mx-auto flex justify-center items-center">
+                <img class="w-screen" src="./assets/images/Affiliate/affiliate-pic2.png" alt="">
+              </div>
+          </div>
+        </section>
+        <!--**=======Mobile 2=======**-->
+        <section id="affiliate-section-2" class="xs:block md-max:hidden text-center mx-24">
+            <h2 class="font-semibold text-2xl lg:text-[36px] py-10"></h2>
+            <div class="grid grid-cols-2 mx-auto my-5">
+
+                <div class="xs:col-span-2 s:col-span-2 s-max:col-span-2 md:col-span-2 md-max:col-span-1 my-auto">
+                    <div class="shadow-md rounded-md w-[100%] my-3">
+                        <p class="pt-1 pb-5 px-5 w-fit text-xl font-semibold">4. 独一无二，推广无限制：</p>
+                        <p class="pt-1 pb-1 px-5 w-fit text-left">
+                            独一无二的专享二维码，没有限制的使用平台提供的海报模版,没有限制的设计自己的海报进行推荐和推广；您也可以根据品牌指导的范围规则，个性化设计自己的海报进行推广。                        </p>
+                          <br><br>
+                            <div class="rounded-b-lg xs:col-span-2 s:col-span-2 s-max:col-span-2 md:col-span-2 md-max:col-span-1 mx-auto flex justify-center items-center">
+                              <img class="rounded-b-lg w-screen" src="./assets/images/Affiliate/affiliate-pic2.png" alt="">   
+                          </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!--=======Desktop 3=======-->
+        <section id="affiliate-section-3" class="xs:hidden md:hidden md-max:block 2xl:block text-center mx-36">
+          <div class="mx-auto my-5 shadow-md rounded-md">
+              <div class="px-10">
+                  <div class="w-[100%] my-3">
+                      <p class="py-1 w-fit font-semibold text-xl">5. 充分利用成熟的互联网社区环境，发挥自己的推荐优势:</p>
+                  </div>
+                  <div class="grid grid-cols-3 w-[100%] my-3">
+                      <div class="py-1 px-5 w-fit text-left mx-auto">
+                        <ul class="text-left">
+                          <li class="">
+                            <i class="fa-solid fa-square-check"></i> 微信1对1
+                          </li>
+                          <li class="">
+                            <i class="fa-solid fa-square-check"></i> 微信朋友圈
+                          </li>
+                          <li class="">
+                            <i class="fa-solid fa-square-check"></i> 短信1对1
+                          </li>
+                          <li class="">
+                            <i class="fa-solid fa-square-check"></i> 微信直播
+                          </li>
+                          <li class="">
+                            <i class="fa-solid fa-square-check"></i> 知乎
+                          </li>
+                          <li class="">
+                            <i class="fa-solid fa-square-check"></i> LinkedIn
+                          </li>
+                        </ul>
+                      </div>
+                      <div class="py-1 px-5 w-fit text-left">
+                        <ul class="text-left">
+                          <li class="">
+                            <i class="fa-solid fa-square-check"></i> Facebook
+                          </li>
+                          <li class="">
+                            <i class="fa-solid fa-square-check"></i> 微博
+                          </li>
+                          <li class="">
+                            <i class="fa-solid fa-square-check"></i> Twitter
+                          </li>
+                          <li class="">
+                            <i class="fa-solid fa-square-check"></i> Youtube视频
+                          </li>
+                          <li class="">
+                            <i class="fa-solid fa-square-check"></i> 西瓜视频
+                          </li>
+                          <li class="">
+                            <i class="fa-solid fa-square-check"></i> 抖音微视频
+                          </li>
+                        </ul>
+                      </div>
+                      <div class="py-1 px-5 w-fit text-left">
+                        <ul class="text-left">
+                          <li class="">
+                            <i class="fa-solid fa-square-check"></i> 抖音直播
+                          </li>
+                          <li class="">
+                            <i class="fa-solid fa-square-check"></i> 小红书直播
+                          </li>
+                          <li class="">
+                            <i class="fa-solid fa-square-check"></i> 快手直播
+                          </li>
+                          <li class="">
+                            <i class="fa-solid fa-square-check"></i> 百家好直播
+                          </li>
+                          <li class="">
+                            <i class="fa-solid fa-square-check"></i> 电邮1对1
+                          </li>
+                          <li class="">
+                            <i class="fa-solid fa-square-check"></i> 电邮1对多
+                          </li>
+                          <li class="">
+                            <i class="fa-solid fa-square-check"></i> 自己的网站
+                          </li>
+                        </ul>
+                      </div>
+                  </div>
+                  
+                  <div class="w-[100%] my-3">
+                      <p class="py-1  w-fit text-left pl-20 xl:pl-5">以上众多的推广渠道，您无论写一封推荐信：还是发一个推荐信息，只要记得发送给您所有的电邮列单或短信/微信名单时附上您的专享链接。</p>
+                  </div>
+                 
+              </div>
+          </div>
+          <div class="mx-auto flex justify-center items-center">
+            <img class="w-screen" src="./assets/images/Affiliate/affiliate-pic3.png" alt="">   
+         </div>
+        </section>
+      
+        <!--=======Mobile 3=======*-->
+        <section id="affiliate-section-3" class="xs:block md:block md-max:hidden text-center mx-24">
+            <div class="shadow-md rounded-md grid grid-cols-2 mx-auto my-5">
+                <div class="xs:col-span-2 s:col-span-2 s-max:col-span-2 md:col-span-2 md-max:col-span-1 my-auto">
+                    <div class="w-[100%] my-3">
+                        <p class="py-1 px-5 w-fit font-semibold text-xl text-left">5. 充分利用成熟的互联网社区环境，发挥自己的推荐优势:</p>
+                    </div>
+                    <div class="grid grid-cols-3 w-[100%] my-3">
+                      <div class="py-1 px-5 w-fit text-left mx-auto">
+                        <ul class="text-left">
+                          <li class="">
+                            <i class="fa-solid fa-square-check"></i> 微信1对1
+                          </li>
+                          <li class="">
+                            <i class="fa-solid fa-square-check"></i> 微信朋友圈
+                          </li>
+                          <li class="">
+                            <i class="fa-solid fa-square-check"></i> 短信1对1
+                          </li>
+                          <li class="">
+                            <i class="fa-solid fa-square-check"></i> 微信直播
+                          </li>
+                          <li class="">
+                            <i class="fa-solid fa-square-check"></i> 知乎
+                          </li>
+                          <li class="">
+                            <i class="fa-solid fa-square-check"></i> LinkedIn
+                          </li>
+                        </ul>
+                      </div>
+                      <div class="py-1 px-5 w-fit text-left">
+                        <ul class="text-left">
+                          <li class="">
+                            <i class="fa-solid fa-square-check"></i> Facebook
+                          </li>
+                          <li class="">
+                            <i class="fa-solid fa-square-check"></i> 微博
+                          </li>
+                          <li class="">
+                            <i class="fa-solid fa-square-check"></i> Twitter
+                          </li>
+                          <li class="">
+                            <i class="fa-solid fa-square-check"></i> Youtube视频
+                          </li>
+                          <li class="">
+                            <i class="fa-solid fa-square-check"></i> 西瓜视频
+                          </li>
+                          <li class="">
+                            <i class="fa-solid fa-square-check"></i> 抖音微视频
+                          </li>
+                        </ul>
+                      </div>
+                      <div class="py-1 px-5 w-fit text-left">
+                        <ul class="text-left">
+                          <li class="">
+                            <i class="fa-solid fa-square-check"></i> 抖音直播
+                          </li>
+                          <li class="">
+                            <i class="fa-solid fa-square-check"></i> 小红书直播
+                          </li>
+                          <li class="">
+                            <i class="fa-solid fa-square-check"></i> 快手直播
+                          </li>
+                          <li class="">
+                            <i class="fa-solid fa-square-check"></i> 百家好直播
+                          </li>
+                          <li class="">
+                            <i class="fa-solid fa-square-check"></i> 电邮1对1
+                          </li>
+                          <li class="">
+                            <i class="fa-solid fa-square-check"></i> 电邮1对多
+                          </li>
+                          <li class="">
+                            <i class="fa-solid fa-square-check"></i> 自己的网站
+                          </li>
+                        </ul>
+                      </div>
+                  </div>
+                  
+                  <div class="w-[100%] my-3">
+                      <p class="py-1  w-fit text-left pl-20 xs:px-5 s:px-5">以上众多的推广渠道，您无论写一封推荐信：还是发一个推荐信息，只要记得发送给您所有的电邮列单或短信/微信名单时附上您的专享链接。</p>
+                  </div>
+                    <div class=" xs:col-span-2 s:col-span-2 s-max:col-span-2 md:col-span-2 md-max:col-span-1 mx-auto flex justify-center items-center">
+                      <img class="w-screen rounded-b-lg" src="./assets/images/Affiliate/affiliate-pic3.png" alt="">   
+                   </div>
+                </div>
+            </div>
+        </section>
+
+        <!--=======Desktop 4=======-->
+        <section id="affiliate-section-4" class="xs:hidden md:hidden md-max:block 2xl:block text-center mx-36">
+                  <div class="grid grid-cols-2 mx-auto my-5">
+
+                      <div class="xs:col-span-2 s:col-span-2 s-max:col-span-2 md:col-span-2 md-max:col-span-1 my-auto">
+                          <div class="shadow-md rounded-md w-[100%] my-3">
+                              <p class="py-1 px-5 w-fit text-left font-semibold text-xl">6. 广告投放：如果您愿意再精准的渠道投放一些广告，收益还会更多。</p>
+                          </div>
+                          <div class="shadow-md rounded-md w-[100%] my-3">
+                              <p class="py-1 px-5 w-fit text-left font-semibold text-xl">
+                                7. 提前预防，治未病:
+                              </p>
+                              <p class="py-1 px-5 w-fit text-left">
+                                把【健康预报】的准确性分享给您的朋友，越是提早了自己未来的健康状况，就有足够的时间提早准备治未病，从而让您的朋友处于健康的不败之地。
+                              </p>
+                          </div>
+                          <div class="shadow-md rounded-md w-[100%] my-3">
+                              <p class="py-1 px-5 w-fit font-semibold text-xl">8. 收获感激:</p>
+                              <p class="py-1 px-5 w-fit text-left">
+                                如果您的朋友因为您提供【健康预报】的资讯，而成功的避开了一次重大疾病，他们一定特别感激您。                              
+                              </p>
+                          </div>
+                          <div class="shadow-md rounded-md w-[100%] my-3">
+                            <p class="py-1 px-5 w-fit font-semibold text-xl">9. 省力:</p>
+                            <p class="py-1 px-5 w-fit text-left">
+                              不必到处奔波，足不出户也能经过互联网推广，赢取理想的回报。                            
+                            </p>
+                          </div>
+                          <div class="shadow-md rounded-md w-[100%] my-3">
+                          <p class="py-1 px-5 w-fit font-semibold text-xl">10. 每月结算：</p>
+                          <p class="py-1 px-5 w-fit text-left">
+                            满足平台基本额度的基础上，您可以每月按时结算收益。                          
+                          </p>
+                        </div>
+                        <div class="shadow-md rounded-md w-[100%] my-3">
+                        <p class="py-1 px-5 w-fit font-semibold text-xl">11.每年收获更多被动收入：</p>
+                        <p class="py-1 px-5 w-fit text-left">
+                          您的用户逐年订阅，您就会逐年享受更多的被动收入。                        
+                        </p>
+                      </div>
+                         
+                    </div>
+                    <div class="w-3/5 xs:col-span-2 s:col-span-2 s-max:col-span-2 md:col-span-2 md-max:col-span-1 mx-auto flex justify-center items-center">
+                      <img class="w-screen" src="./assets/images/Affiliate/affiliate-pic4.png" alt="">   
+                   </div>
+                  </div>
+        </section>
+              
+        <!--=======Mobile 4=======*-->
+        <section id="affiliate-section-4" class="xs:block md-max:hidden text-center mx-24">
+                  <div class="grid grid-cols-2 mx-auto my-5">
+
+                    <div class="xs:col-span-2 s:col-span-2 s-max:col-span-2 md:col-span-2 md-max:col-span-1 my-auto">
+                        <div class="shadow-md rounded-md w-[100%] my-3">
+                            <p class="xs:py-5 s:py-5 py-1 px-5 w-fit text-left font-semibold text-xl">6. 广告投放：如果您愿意再精准的渠道投放一些广告，收益还会更多。</p>
+                        </div>
+                        <div class="xs:py-5 s:py-5  shadow-md rounded-md w-[100%] my-3">
+                            <p class="py-1 px-5 w-fit text-left font-semibold text-xl">
+                              7. 提前预防，治未病:
+                            </p>
+                            <p class="py-1 px-5 w-fit text-left">
+                              把【健康预报】的准确性分享给您的朋友，越是提早了自己未来的健康状况，就有足够的时间提早准备治未病，从而让您的朋友处于健康的不败之地。
+                            </p>
+                        </div>
+                        <div class="xs:py-5 s:py-5 shadow-md rounded-md w-[100%] my-3">
+                            <p class="py-1 px-5 w-fit font-semibold text-xl">8. 收获感激:</p>
+                            <p class="py-1 px-5 w-fit text-left">
+                              如果您的朋友因为您提供【健康预报】的资讯，而成功的避开了一次重大疾病，他们一定特别感激您。                              
+                            </p>
+                        </div>
+                        <div class="xs:py-5 s:py-5 shadow-md rounded-md w-[100%] my-3">
+                          <p class="py-1 px-5 w-fit font-semibold text-xl">9. 省力:</p>
+                          <p class="py-1 px-5 w-fit text-left">
+                            不必到处奔波，足不出户也能经过互联网推广，赢取理想的回报。                            
+                          </p>
+                        </div>
+                        <div class="xs:py-5 s:py-5 shadow-md rounded-md w-[100%] my-3">
+                        <p class="py-1 px-5 w-fit font-semibold text-xl">10. 每月结算：</p>
+                        <p class="py-1 px-5 w-fit text-left">
+                          满足平台基本额度的基础上，您可以每月按时结算收益。                          
+                        </p>
+                      </div>
+                      <div class="xs:py-5 s:py-5 shadow-md rounded-md w-[100%] my-3">
+                      <p class="py-1 px-5 w-fit font-semibold text-xl">11.每年收获更多被动收入：</p>
+                      <p class="py-1 px-5 w-fit text-left">
+                        您的用户逐年订阅，您就会逐年享受更多的被动收入。                        
+                      </p>
+                    </div>
+                       
+                  </div>
+                  <div class="xs:pt-5 s:pt-8 w-2/5 xs:col-span-2 s:col-span-2 s-max:col-span-2 md:col-span-2 md-max:col-span-1 mx-auto flex justify-center items-center">
+                    <img class="w-screen" src="./assets/images/Affiliate/affiliate-pic4.png" alt="">   
+                 </div>
+                </div>
+        </section>
+
+
+        <!--=======Desktop 5=======-->
+        <section id="affiliate-section-5" class="xs:hidden md:hidden md-max:block 2xl:block text-center mx-36">
+                  <div class="mx-auto my-5 shadow-md rounded-md">
+                      <div class="px-10">
+                          <div class="grid grid-cols-2 w-[100%] my-3">
+                            <div class="col-span-1 mx-auto">
+                              <img class="w-screen" src="./assets/images/Affiliate/affiliate-pic5.png" alt="">   
+                            </div>
+                            <div class="col-span-1 px-10 my-auto text-left">
+                            当然您可能会想：那岂不是玩儿好一部手机就能赐大钱
+                            我们不会把这份推广创业项目看得如此容易，同时，用心做,努力做，哪怕只有一部手机，都能做得挺好!
+                            <br><br>
+                            客观的说这项推广创业的迅速拓展可以依靠人脉，同时，也需要投入一定的努力和付出。【健康预报】平台希望可以吸纳有资源并愿意勤奋工作的人士参加我们的拓展职业计划同时，对于缺乏资源，但愿意付出更大努力，需要发挥自己以及需要成长机会的人士,也是我们珍惜的伙伴。
+                            <br><br>
+                            立即申请加入【健康预报】职业拓展计划。
+                            <div class="text-left pt-10 pb-5">
+                              <button class="bg-orange-400 text-white py-1 px-10 rounded-md">立即申请</button>
+                          </div>
+                            </div>
+                            
+                          </div>
+                          
+                      </div>
+                  </div>
+
+        </section>
+              
+        <!--=======Mobile 5=======*-->
+        <section id="affiliate-section-5" class="xs:block md:block md-max:hidden text-center mx-24">
+          <div class="mx-auto my-5 shadow-md rounded-md">
+            <div class="px-10 mt-20">
+                <div class="grid grid-cols-2 w-[100%] my-3">
+
+                  <div class="col-span-2 my-auto text-left">
+                  当然您可能会想：那岂不是玩儿好一部手机就能赐大钱
+                  我们不会把这份推广创业项目看得如此容易，同时，用心做,努力做，哪怕只有一部手机，都能做得挺好!
+                  <br><br>
+                  客观的说这项推广创业的迅速拓展可以依靠人脉，同时，也需要投入一定的努力和付出。【健康预报】平台希望可以吸纳有资源并愿意勤奋工作的人士参加我们的拓展职业计划同时，对于缺乏资源，但愿意付出更大努力，需要发挥自己以及需要成长机会的人士,也是我们珍惜的伙伴。
+                  <br><br>
+                  立即申请加入【健康预报】职业拓展计划。
+                  <div class="text-center pt-10 pb-5">
+                    <button class="bg-orange-400 text-white py-1 px-10 rounded-md">立即申请</button>
+                </div>
+                  </div>
+                  
+                </div>
+                <div class="col-span-2 mx-auto">
+                  <img class="w-screen" src="./assets/images/Affiliate/affiliate-pic5.png" alt="">   
+                </div>
+            </div>
+        </div>
+        </section>
+
+        <h2 class="xs:pt-16 xs:pb-10 s:pt-16 s:pb-12 font-semibold text-[28px] xl:text-[36px] 2xl:text-[38px] pt-10 pb-5 text-center">经营此推广创业项目的回报</h2>
+        <p class=" xs:pb-10 s:pb-12 xs:text-lg s:text-lg text-xl xl:text-[18px] 2xl:text-[26px] text-center">经过您的努力推广，您的回报将会是怎么样的?</p>
+
+        <!--=======Desktop 6=======-->
+        <section id="affiliate-section-6" class="xs:hidden md:block md-max:block 2xl:block text-center mx-36 mb-20">               
+                  <div class="shadow-md rounded-md grid grid-cols-2 mx-auto my-5 xl:my-0 xl:py-auto 2xl:py-0">
+                      <div class="bg-gradient-blue rounded-l-xl xs:col-span-2 s:col-span-2 s-max:col-span-2 md:col-span-2 md-max:col-span-1 mx-auto flex justify-center items-center">
+                        <img class="w-screen" src="./assets/images/Affiliate/affiliate-pic6.png" alt="">
+                      </div>
+                      <div class="bg-light-brown rounded-r-xl xs:col-span-2 s:col-span-2 s-max:col-span-2 md:col-span-2 md-max:col-span-1 lg:px-12 lg:py-12 xl:px-16 xl:py-16 2xl:px-10 2xl:py-10">
+                        <h2 class="font-semibold text-lg lg:text-[28px] text-left px-5 pt-10 pb-8">直接分成</h2>
+                          <div class="w-[100%] my-3 2xl:text-[24px]">
+                              <p class="py-1 px-5 text-left w-fit">
+                                此营销推广创业计划，为您提供一个相当理想的分成，总共把相当于产品单价的30%分享给推广联盟创业者。只要您直接推荐的用户订阅【健康预报】的服务,您会拿到产品单价的20%。
+                                <br><br>如果您推荐的客户订阅1年的服务,您的收入为：70元/单。如果您的客户订阅10年的服务,您的收入为：700元/单。如果每一个月你直接推荐的人数达到10个（三天一个），每人只订阅了一年的预告服务，您当月的收入为700元!如果每人订阅了10年的预告服务，您当月的收入为7000元。您能推荐更多购买者,您的收入自然更多。
+                                <br><br>
+                                不仅如此，除了您的直接分成之外,也有间接分成!</p>
+                          </div>
+                      </div>
+                  </div>
+        </section>
+
+        <!--=======Mobile 6=======-->
+        <section id="affiliate-section-6" class="xs:block s:block md:hidden md-max:hidden text-center mx-20">               
+                 <div class="shadow-md rounded-md mx-auto my-5 -mobile xl:my-0 xl:py-auto 2xl:py-16 h-auto mx-36">
+                    <div class="bg-light-brown rounded-t-lg my-auto ">
+                      <h2 class="font-semibold text-lg lg:text-[28px] text-left px-10 pt-12 pb-8">直接分成</h2>
+                        <div class="w-[100%] pb-10">
+                            <p class="text-left w-fit px-10">
+                              此营销推广创业计划，为您提供一个相当理想的分成，总共把相当于产品单价的30%分享给推广联盟创业者。只要您直接推荐的用户订阅【健康预报】的服务,您会拿到产品单价的20%。
+                              <br><br>如果您推荐的客户订阅1年的服务,您的收入为：70元/单。如果您的客户订阅10年的服务,您的收入为：700元/单。如果每一个月你直接推荐的人数达到10个（三天一个），每人只订阅了一年的预告服务，您当月的收入为700元!如果每人订阅了10年的预告服务，您当月的收入为7000元。您能推荐更多购买者,您的收入自然更多。
+                              <br><br>
+                              不仅如此，除了您的直接分成之外,也有间接分成!</p>
+                        </div>
+                    </div>
+                    <div class="bg-gradient-blue rounded-b-lg xs:col-span-2 s:col-span-2 s-max:col-span-2 md:col-span-2 md-max:col-span-1 mx-auto flex justify-center items-center">
+                      <img class="md:w-2/3 " src="../Health Forecast-CN/assets/images/Affiliate/affiliate-pic6.png" alt="">
+                    </div>
+                      
+                  </div>
+        </section>
+
+        <!--=======Desktop 7=======-->
+        <section id="affiliate-section-7" class="xs:hidden s:hidden md:block md-max:block 2xl:block text-center mx-36 mb-20">               
+                  <div class="shadow-md rounded-md grid grid-cols-2 mx-auto my-5 xl:py-16 2xl:py-0">
+                    <div class="bg-gradient-blue rounded-l-xl xs:col-span-2 s:col-span-2 s-max:col-span-2 md:col-span-2 md-max:col-span-1 mx-auto flex justify-center items-center">
+                      <img class="w-screen mt-auto" src="./assets/images/Affiliate/affiliate-pic7.png" alt="">
+                    </div>
+                      <div class="rounded-r-xl bg-light-brown xs:col-span-2 s:col-span-2 s-max:col-span-2 md:col-span-2 md-max:col-span-1 py-5 lg:px-12 lg:py-12 xl:px-16 xl:py-16 2xl:px-10 2xl:py-10 2xl:pt-20">
+                        <h2 class="font-semibold text-lg lg:text-[28px] text-left px-5 pt-10 pb-8">间接分成</h2>
+                          <div class="w-[100%] my-3 2xl:text-[24px]">
+                              <p class="py-1 px-5 text-left w-fit leading-8 ">
+                                如果您推荐的用户也参加了【推广创业】计划，那么他们属于您的直接“下级“经营者他们每单推荐的【健康预报】订阅会给你10%收益(最低:35元/单)。
+                                <br><br>
+                                假如说您创造了5个愿意推广的“下级“经销商，并且这些下级经销商平均每个月产生10个【健康预报】订阅，这就是每个月有50单生意跟你有关。因为您每单收入为35元，经过你的下级你每月的“二级收入”为：1750元。
+                                <br><br>
+                                不仅如此，您也能享福终生的收益。
+                              </p>
+                          </div>
+                      </div>
+                  </div>
+        </section>
+
+        <!--=======Mobile 7=======-->
+        <section id="affiliate-section-7" class="xs:block s:block md:block md-max:hidden text-center mx-20">               
+                  <div class="shadow-md rounded-md mx-auto my-20 xl:py-16 2xl:py-0 h-auto mx-36">
+                    <div class="bg-light-brown rounded-t-xl my-auto px-10 py-10">
+                      <h2 class="font-semibold text-lg lg:text-[28px] text-left pb-2">间接分成</h2>
+                        <div class="w-[100%] my-3">
+                            <p class="py-1 text-left w-fit">
+                              如果您推荐的用户也参加了【推广创业】计划，那么他们属于您的直接“下级“经营者他们每单推荐的【健康预报】订阅会给你10%收益(最低:35元/单)。
+                              <br><br>
+                              假如说您创造了5个愿意推广的“下级“经销商，并且这些下级经销商平均每个月产生10个【健康预报】订阅，这就是每个月有50单生意跟你有关。因为您每单收入为35元，经过你的下级你每月的“二级收入”为：1750元。
+                              <br><br>
+                              不仅如此，您也能享福终生的收益。
+                              </p>
+                        </div>
+                    </div>
+                      <div class="bg-gradient-blue rounded-b-xl xs:col-span-2 s:col-span-2 s-max:col-span-2 md:col-span-2 md-max:col-span-1 mx-auto flex justify-center items-center">
+                        <img class="w-screen" src="../Health Forecast-CN/assets/images/Affiliate/affiliate-pic7.png" alt="">
+                      </div>
+                  </div>
+        </section>
+
+        <!--=======Desktop 8=======-->
+        <section id="affiliate-section-8" class="xs:hidden s:hidden md:hidden md-max:block 2xl:block text-center mx-36">               
+          <div class="shadow-md rounded-lg grid grid-cols-2 mx-auto my-5 xl:py-16 2xl:py-0">
+            <div class="bg-gradient-blue rounded-l-xl xs:col-span-2 s:col-span-2 s-max:col-span-2 md:col-span-2 md-max:col-span-1 mx-auto flex justify-center items-center">
+              <img class="w-screen mt-auto" src="./assets/images/Affiliate/affiliate-pic8.png" alt="">
+            </div>
+              <div class="bg-light-brown rounded-r-lg xs:col-span-2 s:col-span-2 s-max:col-span-2 md:col-span-2 md-max:col-span-1 lg:px-12 lg:py-12 xl:px-16 xl:py-16 2xl:px-10 2xl:py-10">
+                <h2 class="font-semibold text-lg lg:text-[28px] text-left px-5 pt-10 pb-5">终生分成</h2>
+                    <div class="w-[100%] my-3 2xl:text-[24px]">
+                        <p class="py-1 px-5 text-left w-fit leading-8">
+                        我们的创业机会很特别，一旦开始，系统自动为您提供“纸生“的收益机会。只要您推荐的一位客户订阅【健康预报】的服务，在系统里他会变成您的“终生“关系。只要他在此下订单，虽然第二次他没有经过您的特殊链接到我们的网站，因为系统里你们的关系他成功完成订单后分成就是您的。
+                        <br><br>
+                        比如客户一年后回来,续费多买一年【健康预报】服务,您什么部不需要做我们的系统会自动的，为您提供这个订单的20%分成，作为您的被动收入。
+                        <br><br>
+                        如果您曾经推荐的客户，几个月后，决定在【健康预报】网站上购买一些药方，您也会享受这些订单的20%分成
+                        <br><br>
+                        1年内您总共能赚多少？这个当然取决于您的努力和您的下级经销商的努力！您的年收入数字可以是普通的,也可以很理想,甚至超大。互联网时代，一切推广都变得更简单更容易。如果平均每天，您可以实质的推荐10位用户，您可以自己可以算一算月收益!
+                        <br><br>
+                        如果您摸索出了非常有效的推广方法，每天可创造100位以上用户，同时您的下级也跟您一样优秀......您可以算一算收益!
+                        <br><br>
+                        更重要的是，用户每年订阅，您第一年的努力将成为第二年的被动收益......以此类推前3年的努力，将成为第四年的被动收益......</p>
+                    </div>
+              </div>
+          </div>
+        </section>
+
+        <!--=======Mobile 8=======-->
+        <section id="affiliate-section-8" class="xs:block md:block md-max:hidden text-center mx-20">               
+                  <div class="shadow-md rounded-md mx-auto my-5 h-auto mx-36">
+                    <div class="bg-light-brown rounded-t-lg my-auto px-10 py-10">
+                      <h2 class="font-semibold text-lg lg:text-[28px] text-left pb-2">终生分成</h2>
+                        <div class="w-[100%] my-3">
+                            <p class="py-1 text-left w-fit">
+                              我们的创业机会很特别，一旦开始，系统自动为您提供“纸生“的收益机会。只要您推荐的一位客户订阅【健康预报】的服务，在系统里他会变成您的“终生“关系。只要他在此下订单，虽然第二次他没有经过您的特殊链接到我们的网站，因为系统里你们的关系他成功完成订单后分成就是您的。
+                              <br><br>
+                              比如客户一年后回来,续费多买一年【健康预报】服务,您什么部不需要做我们的系统会自动的，为您提供这个订单的20%分成，作为您的被动收入。
+                              <br><br>
+                              如果您曾经推荐的客户，几个月后，决定在【健康预报】网站上购买一些药方，您也会享受这些订单的20%分成
+                              <br><br>
+                              1年内您总共能赚多少？这个当然取决于您的努力和您的下级经销商的努力！您的年收入数字可以是普通的,也可以很理想,甚至超大。互联网时代，一切推广都变得更简单更容易。如果平均每天，您可以实质的推荐10位用户，您可以自己可以算一算月收益!
+                              <br><br>
+                              如果您摸索出了非常有效的推广方法，每天可创造100位以上用户，同时您的下级也跟您一样优秀......您可以算一算收益!
+                              <br><br>
+                              更重要的是，用户每年订阅，您第一年的努力将成为第二年的被动收益......以此类推前3年的努力，将成为第四年的被动收益......
+                            </p>
+                        </div>
+                    </div>
+                    <div class="rounded-b-lg bg-gradient-blue xs:col-span-2 s:col-span-2 s-max:col-span-2 md:col-span-2 md-max:col-span-1 mx-auto flex justify-center items-center pt-10">
+                      <img class="w-screen" src="../Health Forecast-CN/assets/images/Affiliate/affiliate-pic8.png" alt="">
+                    </div>
+                      
+                  </div>
+        </section>
+
+<!--Disclaimer-->
+
+<section id="disclaimer" class="xs:block s:block md:hidden lg:hidden xl:hidden 2xl:hidden">
+  <p class="text-center bg-blue-100 s:text-base xs:py-2 xs:px-20 s:py-2 s:px-5">郑重声明: 本网站信息及报告仅供参考，本项服务不作为您的医生，也不提供任何医疗服务。相关医疗服务请咨询您的医生。</p>
+</section>
+
+<section id="disclaimer" class="xs:hidden s:hidden md:block lg:block xl:block 2xl:hidden">
+  <p class="text-center bg-blue-100 text-sm lg:py-2">郑重声明: 本网站信息及报告仅供参考，本项服务不作为您的医生，也不提供任何医疗服务。相关医疗服务请咨询您的医生。</p>
+</section>
+
+<section id="disclaimer" class="xs:hidden s:hidden md:hidden lg:hidden xl:hidden lg:block 2xl:block">
+  <p class="text-center bg-blue-100 text-2xl lg:py-8">郑重声明: 本网站信息及报告仅供参考，本项服务不作为您的医生，也不提供任何医疗服务。相关医疗服务请咨询您的医生。</p>
+</section>
+
+<!--Footer-->
+
+<footer class="bg-[#633E23] text-white xs:block s:hidden md:hidden lg:hidden xl:hidden 2xl:hidden" id="footer-mobile-xs">
+  <div class="grid xs:grid-cols-4 px-16">
+    <!--<div class="
+    xs:col-end-4 xs:row-end-7 xs:col-span-2
+    ">
+    <img class="s:pt-5 xs:w-[560px]" src="./assets/images/footer/vector.png" alt="">
+    </div>-->
+
+    <div class="
+    xs:col-span-3
+    "> 
+      <img class="xs:px-5 xs:pt-10" src="./assets/images/footer/logo-darkbg.png" alt="">
+      
+    </div>
+    <hr class="col-span-4 h-px my-8 bg-gray-200 border-0 dark:bg-gray-700">
+    <div class="
+    xs:col-span-3
+    xs:pr-10 s:px-10
+    pb-10
+    ">
+    <p class="text-lg font-bold pb-3">产品</p>
+    <ul>
+      <li class="md:text-xs lg:text-sm py-1">
+        <a href="">基本体质测试</a>
+      </li>
+      <li class="md:text-xs lg:text-sm py-1">
+        <a href="">本运季健康报告</a>
+      </li>
+      <li class="md:text-xs lg:text-sm py-1">
+        <a href="">健康报告</a>
+      </li>
+      <li class="md:text-xs lg:text-sm py-1">
+        <a href="">服务范围</a>
+      </li>
+      <li class="md:text-xs lg:text-sm py-1">
+        <a href="">FAQ常见问题解答</a>
+      </li>
+    </ul>
+    </div>
+    <div class="
+    xs:col-span-3
+    xs:pr-10 s:px-10
+    pb-10
+    ">
+    <p class="text-lg font-bold pb-3">会员</p>
+    <ul>
+      <li class="md:text-xs lg:text-sm py-1">
+        <a href="">会员区</a>
+      </li>
+      <li class="md:text-xs lg:text-sm py-1">
+        <a href="">健康日记</a>
+      </li>
+      <li class="md:text-xs lg:text-sm py-1">
+        <a href="">健康规划和管理</a>
+      </li>
+      <li class="md:text-xs lg:text-sm py-1">
+        <a href="">提建议</a>
+      </li>
+      <li class="md:text-xs lg:text-sm py-1">
+        <a href="">提交客户见证</a>
+      </li>
+    </ul>
+    </div>
+    <div class="
+    xs:col-span-4
+    xs:pr-0 s:px-10
+    pb-10
+    ">
+      <p class="text-lg font-bold pb-3">联系与合作</p>
+      <ul>
+        <li class="md:text-xs lg:text-sm py-1">
+          <a href="">个人提问及联系</a>
+        </li>
+        <li class="md:text-xs lg:text-sm py-1">
+          <a href="affiliate.html">个人创业机会</a>
+        </li>
+        <li class="md:text-xs lg:text-sm py-1">
+          <a href="">企业合作</a>
+          <img class="ml-auto -mt-32 justify-end items-start top-0 right-0 w-1/2" src="./assets/images/footer/vector.png" alt="">
+
+        </li>
+      </ul>
+
+    </div>
+  </div>
+</footer>
+
+<footer class="bg-[#633E23] text-white xs:hidden s:block md:hidden lg:hidden xl:hidden 2xl:hidden" id="footer-mobile">
+  <div class="grid s:grid-cols-3 md:grid-rows-2">
+    <div class="
+    s:col-end-4 s:row-end-5 s:col-span-1
+    ">
+    <img class="s:pt-5 md:pt-10 lg:pt-10 xl:pt-15" src="./assets/images/footer/vector.png" alt="">
+    </div>
+
+    <div class="
+    s:row-span-1
+    s:col-span-1
+    "> 
+      <img class="xs:px-10 s:px-10 s:pt-10 xs:pt-10" src="./assets/images/footer/logo-darkbg.png" alt="">
+      
+    </div>
+
+    <div class="py-10
+    s:col-span-2
+    ">
+      <hr class="h-px my-8 bg-gray-200 border-0 dark:bg-gray-700">
+    </div>
+
+    <div class="
+    s:col-span-2
+    xs:px-10 s:px-10
+    pb-10
+    ">
+    <p class="text-lg font-bold pb-3">产品</p>
+    <ul>
+      <li class="md:text-xs lg:text-sm py-1">
+        <a href="">基本体质测试</a>
+      </li>
+      <li class="md:text-xs lg:text-sm py-1">
+        <a href="">本运季健康报告</a>
+      </li>
+      <li class="md:text-xs lg:text-sm py-1">
+        <a href="">健康报告</a>
+      </li>
+      <li class="md:text-xs lg:text-sm py-1">
+        <a href="">服务范围</a>
+      </li>
+      <li class="md:text-xs lg:text-sm py-1">
+        <a href="">FAQ常见问题解答</a>
+      </li>
+    </ul>
+    </div>
+    <div class="
+    s:col-span-2
+    xs:px-10 s:px-10
+    pb-10
+    ">
+    <p class="text-lg font-bold pb-3">会员</p>
+    <ul>
+      <li class="md:text-xs lg:text-sm py-1">
+        <a href="">会员区</a>
+      </li>
+      <li class="md:text-xs lg:text-sm py-1">
+        <a href="">健康日记</a>
+      </li>
+      <li class="md:text-xs lg:text-sm py-1">
+        <a href="">健康规划和管理</a>
+      </li>
+      <li class="md:text-xs lg:text-sm py-1">
+        <a href="">提建议</a>
+      </li>
+      <li class="md:text-xs lg:text-sm py-1">
+        <a href="">提交客户见证</a>
+      </li>
+    </ul>
+    </div>
+    <div class="
+    s:col-span-2
+    xs:px-10 s:px-10
+    pb-10
+    ">
+      <p class="text-lg font-bold pb-3">联系与合作</p>
+      <ul>
+        <li class="md:text-xs lg:text-sm py-1">
+          <a href="">个人提问及联系</a>
+        </li>
+        <li class="md:text-xs lg:text-sm py-1">
+          <a href="affiliate.html">个人创业机会</a>
+        </li>
+        <li class="md:text-xs lg:text-sm py-1">
+          <a href="">企业合作</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</footer>
+
+<footer class="bg-[#633E23] text-white xs:hidden s:hidden md:block lg:hidden xl:hidden 2xl:hidden" id="footer">
+  <div class="grid md:grid-cols-5 md:grid-rows-2">
+    <div class="
+    md:row-span-2 md:col-span-2
+    mx-auto 
+    "><img class="s:pt-5 md:pt-10 lg:pt-10 xl:pt-15" src="./assets/images/footer/vector.png" alt=""></div>
+
+    <div class="
+    md:row-span-1
+    md:col-span-3
+    py-0 my-0
+    "> 
+      <img class="md:pt-10 lg:pt-5 xl:pt-15" src="./assets/images/footer/logo-darkbg.png" alt="">
+      <hr class="flex w-full h-px my-8 bg-gray-200 border-0 dark:bg-gray-700">
+    </div>
+
+    <div class="
+    md:row-span-1
+    pb-5
+    ">
+    <p class="md:text-sm text-base font-bold pb-3">产品</p>
+    <ul>
+      <li class="md:text-xs lg:text-sm py-1">
+        <a href="">基本体质测试</a>
+      </li>
+      <li class="md:text-xs lg:text-sm py-1">
+        <a href="">本运季健康报告</a>
+      </li>
+      <li class="md:text-xs lg:text-sm py-1">
+        <a href="">健康报告</a>
+      </li>
+      <li class="md:text-xs lg:text-sm py-1">
+        <a href="">服务范围</a>
+      </li>
+      <li class="md:text-xs lg:text-sm py-1">
+        <a href="">FAQ常见问题解答</a>
+      </li>
+    </ul>
+    </div>
+    <div class="
+    md:row-span-1
+
+    ">
+    <p class="text-base font-bold pb-3">会员</p>
+    <ul>
+      <li class="md:text-xs lg:text-sm py-1">
+        <a href="">会员区</a>
+      </li>
+      <li class="md:text-xs lg:text-sm py-1">
+        <a href="">健康日记</a>
+      </li>
+      <li class="md:text-xs lg:text-sm py-1">
+        <a href="">健康规划和管理</a>
+      </li>
+      <li class="md:text-xs lg:text-sm py-1">
+        <a href="">提建议</a>
+      </li>
+      <li class="md:text-xs lg:text-sm py-1">
+        <a href="">提交客户见证</a>
+      </li>
+    </ul>
+    </div>
+    <div class="
+    md:row-span-1
+
+    ">
+      <p class="text-base font-bold pb-3">联系与合作</p>
+      <ul>
+        <li class="md:text-xs lg:text-sm py-1">
+          <a href="">个人提问及联系</a>
+        </li>
+        <li class="md:text-xs lg:text-sm py-1">
+          <a href="affiliate.html">个人创业机会</a>
+        </li>
+        <li class="md:text-xs lg:text-sm py-1">
+          <a href="">企业合作</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</footer>
+
+<footer class="bg-[#633E23] text-white xs:hidden s:hidden md:hidden lg:block xl:block 2xl:hidden" id="footer">
+  <div class="grid md:grid-cols-5 md:grid-rows-2">
+    <div class="
+    md:row-span-2 md:col-span-2
+    mx-auto 
+    "><img class="s:pt-5 md:pt-10 lg:pt-10 xl:pt-15" src="./assets/images/footer/vector.png" alt=""></div>
+
+    <div class="
+    md:row-span-1
+    md:col-span-3
+    py-0 my-0
+    "> 
+      <img class="md:pt-10 lg:pt-5 xl:pt-15" src="./assets/images/footer/logo-darkbg.png" alt="">
+      <hr class="flex w-full h-px my-8 bg-gray-200 border-0 dark:bg-gray-700">
+    </div>
+
+    <div class="
+    md:row-span-1
+    pb-5
+    ">
+    <p class="md:text-sm text-base font-bold pb-3">产品</p>
+    <ul>
+      <li class="md:text-xs lg:text-sm py-1">
+        <a href="">基本体质测试</a>
+      </li>
+      <li class="md:text-xs lg:text-sm py-1">
+        <a href="">本运季健康报告</a>
+      </li>
+      <li class="md:text-xs lg:text-sm py-1">
+        <a href="">健康报告</a>
+      </li>
+      <li class="md:text-xs lg:text-sm py-1">
+        <a href="">服务范围</a>
+      </li>
+      <li class="md:text-xs lg:text-sm py-1">
+        <a href="">FAQ常见问题解答</a>
+      </li>
+    </ul>
+    </div>
+    <div class="
+    md:row-span-1
+
+    ">
+    <p class="text-base font-bold pb-3">会员</p>
+    <ul>
+      <li class="md:text-xs lg:text-sm py-1">
+        <a href="">会员区</a>
+      </li>
+      <li class="md:text-xs lg:text-sm py-1">
+        <a href="">健康日记</a>
+      </li>
+      <li class="md:text-xs lg:text-sm py-1">
+        <a href="">健康规划和管理</a>
+      </li>
+      <li class="md:text-xs lg:text-sm py-1">
+        <a href="">提建议</a>
+      </li>
+      <li class="md:text-xs lg:text-sm py-1">
+        <a href="">提交客户见证</a>
+      </li>
+    </ul>
+    </div>
+    <div class="
+    md:row-span-1
+
+    ">
+      <p class="text-base font-bold pb-3">联系与合作</p>
+      <ul>
+        <li class="md:text-xs lg:text-sm py-1">
+          <a href="">个人提问及联系</a>
+        </li>
+        <li class="md:text-xs lg:text-sm py-1">
+          <a href="affiliate.html">个人创业机会</a>
+        </li>
+        <li class="md:text-xs lg:text-sm py-1">
+          <a href="">企业合作</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</footer>
+
+<footer class="bg-[#633E23] text-white xs:hidden s:hidden md:hidden lg:hidden xl:hidden 2xl:block" id="footer">
+  <div class="grid md:grid-cols-5 md:grid-rows-2 mr-56">
+    <div class="
+    md:row-span-2 md:col-span-2
+    mx-auto 
+    "><img class="pt-36 ml-48 w-2/3" src="./assets/images/footer/vector.png" alt=""></div>
+
+    <div class="
+    md:row-span-1
+    md:col-span-3
+    py-0 my-0
+    "> 
+      <img class="2xl:pt-16 w-1/5" src="./assets/images/footer/logo-darkbg.png" alt="">
+      <hr class="flex w-full h-px my-8 bg-gray-200 border-0 dark:bg-gray-700">
+    </div>
+
+    <div class="
+    md:row-span-1
+    pb-5
+    ">
+    <p class="text-3xl font-bold pb-3">产品</p>
+    <ul>
+      <li class="text-xl py-1">
+        <a href="">基本体质测试</a>
+      </li>
+      <li class="text-xl py-1">
+        <a href="">本运季健康报告</a>
+      </li>
+      <li class="text-xl py-1">
+        <a href="">健康报告</a>
+      </li>
+      <li class="text-xl py-1">
+        <a href="">服务范围</a>
+      </li>
+      <li class="text-xl py-1">
+        <a href="">FAQ常见问题解答</a>
+      </li>
+    </ul>
+    </div>
+    <div class="
+    md:row-span-1
+
+    ">
+    <p class="text-3xl font-bold pb-3">会员</p>
+    <ul>
+      <li class=text-xl py-1">
+        <a href="">会员区</a>
+      </li>
+      <li class="text-xl py-1">
+        <a href="">健康日记</a>
+      </li>
+      <li class=text-xl py-1">
+        <a href="">健康规划和管理</a>
+      </li>
+      <li class="vpy-1">
+        <a href="">提建议</a>
+      </li>
+      <li class="text-xl  py-1">
+        <a href="">提交客户见证</a>
+      </li>
+    </ul>
+    </div>
+    <div class="
+    md:row-span-1
+
+    ">
+      <p class="text-3xl font-bold pb-3">联系与合作</p>
+      <ul>
+        <li class="text-xl py-1">
+          <a href="">个人提问及联系</a>
+        </li>
+        <li class="text-xl y-1">
+          <a href="affiliate.html">个人创业机会</a>
+        </li>
+        <li class="text-xl py-1">
+          <a href="">企业合作</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</footer>
+
+<div class="bg-[#633E23] text-white xs:block 2xl:hidden">
+  <hr class=" h-px bg-gray-200 border-0 dark:bg-gray-700">
+  <div>
+    <p class="text-sm py-5 text-center">© 2024. 健康预报</p>
+  </div>
+</div>
+
+<div class="bg-[#633E23] text-white xs:hidden sm:hidden xl:hidden 2xl:block">
+  <hr class="h-px bg-gray-200 border-0 dark:bg-gray-700">
+  <div>
+    <p class="text-xl py-5 text-center">© 2024. 健康预报</p>
+  </div>
+</div>
+
+        <script src="https://cdn.tailwindcss.com"></script>
+        <script src="script/script.js"></script>
+        <script src="script/main.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+        <script>
+      
+        
+            tailwind.config = {
+              theme: {
+                extend: {
+                  colors: {
+                    secondary: '#633E23',
+                    green: '#78B631',
+                  }
+                },
+                screens: {
+                  'xs': '0px',
+                  // => @media (max-width: 576px) { mobile potrait }
+        
+                  's': '576px',
+                  // => @media (min-width: 576px, max-width: 767px) { mobile landscape }
+                  's-max': '767px',
+                  // => @media (min-width: 576px, max-width: 767px) { mobile landscape }
+        
+                  'md': '768px',
+                  // => @media (min-width: 768px, max-width: 1200px) { tablet }
+                  'md-max': '1200px',
+                  // => @media (min-width: 768px, max-width: 1200px) { tablet }
+        
+                  'lg': '1201px',
+                  // => @media (min-width: 1201px, max-width: 1380px) { laptop }
+                  'lg-max': '1380px',
+                  // => @media (min-width: 1201px, max-width: 1380px) { laptop }
+        
+        
+                  'xl': '1381px',
+                  // => @media (min-width: 1381px, max-width: 1500px) { pc }
+                  'xl-max': '1500px',
+                  // => @media (min-width: 1381px, max-width: 1500px) { pc }
+        
+                  '2xl': '1501px',
+                  // => @media (min-width: 1501px, max-width: 2590px) { tv }
+              
+                }
+              }
+            }
+          </script>
+</body>
+</html>
